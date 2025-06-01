@@ -1,51 +1,26 @@
+import { FaThLarge, FaSearch, FaInfoCircle, FaProjectDiagram } from "react-icons/fa"
+
 const menuNavigation = [
     {
         title: 'Dashboard',
-        icon: '',
+        icon: <FaThLarge size={20} />,
         path: '/'
     },
     {
         title: 'Pencarian',
-        icon: '',
-        subMenu: [
-            {
-                title: 'Konverter Jawa',
-                icon: '',
-                path: '/konverter-jawa'
-            },
-            {
-                title: 'Konverter Indonesia',
-                icon: '',
-                path: '/konverter-indonesia'
-            },
-            {
-                title: 'Konverter Aksara Jawa',
-                icon: '',
-                path: '/konverter-aksara-jawa'
-            },
-            {
-                title: 'SPARQL Console',
-                icon: '',
-                path: '/sparql-console'
-            }
-        ]
+        icon: <FaSearch size={20} />,
+        path: '/pencarian'
     },
     {
-        title: 'Data Eksternal',
-        icon: '',
-        subMenu: [
-            {
-                title: 'Daftar Sumber Data',
-                icon: '',
-                path: '/daftar-sumber-data'
-            }
-        ]
+        title: 'Integrasi',
+        icon: <FaProjectDiagram size={23} />,
+        path: '/integrasi'
     },
-        {
-        title: 'Manajemen Data',
-        icon: '',
-        path: '/manajemen-data'
-    }
+    {
+        title: 'About',
+        icon: <FaInfoCircle size={25} />,
+        path: '/about'
+    },
 ]
 
 export default menuNavigation;
