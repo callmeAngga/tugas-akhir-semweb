@@ -1,0 +1,2306 @@
+@prefix ns: <http://localhost:3000/suluk#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://localhost:3000/suluk> a owl:Ontology .
+
+ns:belongsToManuscript a owl:ObjectProperty ;
+    rdfs:domain ns:Sentence ;
+    rdfs:range ns:ManuscriptPart .
+
+ns:belongsToSection a owl:ObjectProperty ;
+    rdfs:domain ns:ManuscriptPart ;
+    rdfs:range ns:ManuscriptSection .
+
+ns:hasManuscriptPart a owl:ObjectProperty ;
+    rdfs:domain ns:ManuscriptSection ;
+    rdfs:range ns:ManuscriptPart .
+
+ns:hasOriginalScript a owl:ObjectProperty ;
+    rdfs:domain ns:Sentence ;
+    rdfs:range ns:OriginalScript .
+
+ns:hasSentence a owl:ObjectProperty ;
+    rdfs:domain ns:ManuscriptPart ;
+    rdfs:range ns:Sentence .
+
+ns:hasTranslation a owl:ObjectProperty ;
+    rdfs:domain ns:Sentence ;
+    rdfs:range ns:Translation .
+
+ns:hasTransliteration a owl:ObjectProperty ;
+    rdfs:domain ns:Sentence ;
+    rdfs:range ns:Transliteration .
+
+ns:kacaNumber a owl:DatatypeProperty ;
+    rdfs:domain ns:ManuscriptPart ;
+    rdfs:range xsd:integer .
+
+ns:originalText a owl:DatatypeProperty ;
+    rdfs:domain ns:OriginalScript ;
+    rdfs:range xsd:string .
+
+ns:sectionTitle a owl:DatatypeProperty ;
+    rdfs:domain ns:ManuscriptSection ;
+    rdfs:range xsd:string .
+
+ns:sentenceNumber a owl:DatatypeProperty ;
+    rdfs:domain ns:Sentence ;
+    rdfs:range xsd:integer .
+
+ns:translationText a owl:DatatypeProperty ;
+    rdfs:domain ns:Translation ;
+    rdfs:range xsd:string .
+
+ns:transliterationText a owl:DatatypeProperty ;
+    rdfs:domain ns:Transliteration ;
+    rdfs:range xsd:string .
+
+ns:Kaca10_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca10 ;
+    ns:hasOriginalScript ns:Kaca10_S1_OS ;
+    ns:hasTranslation ns:Kaca10_S1_TR ;
+    ns:hasTransliteration ns:Kaca10_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca10_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦶꦭꦤꦶꦁꦱꦸꦤ꧀ ꦲꦢꦸꦱ꧀ ꦪꦪꦶ"^^xsd:string .
+
+ns:Kaca10_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Milaningsun adus yayi"^^xsd:string .
+
+ns:Kaca10_S1_TR a ns:Translation ;
+    ns:translationText "Mengapa dinda harus mandi keramas"^^xsd:string .
+
+ns:Kaca10_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca10 ;
+    ns:hasOriginalScript ns:Kaca10_S2_OS ;
+    ns:hasTranslation ns:Kaca10_S2_TR ;
+    ns:hasTransliteration ns:Kaca10_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca10_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦔꦶꦱ꧀ꦠꦺꦴꦤꦶ ꦠꦸꦫꦸꦤꦶꦁ ꦗꦺꦴꦲꦂ"^^xsd:string .
+
+ns:Kaca10_S2_TL a ns:Transliteration ;
+    ns:transliterationText "ngistoni turuning johar"^^xsd:string .
+
+ns:Kaca10_S2_TR a ns:Translation ;
+    ns:translationText "karena untuk memenuhi turunnya bintang"^^xsd:string .
+
+ns:Kaca10_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca10 ;
+    ns:hasOriginalScript ns:Kaca10_S3_OS ;
+    ns:hasTranslation ns:Kaca10_S3_TR ;
+    ns:hasTransliteration ns:Kaca10_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca10_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦁꦏꦁ ꦲꦫꦤ꧀ ꦗꦺꦴꦲꦂ ꦩꦁꦏꦺꦴ"^^xsd:string .
+
+ns:Kaca10_S3_TL a ns:Transliteration ;
+    ns:transliterationText "ingkang aran johar mangko"^^xsd:string .
+
+ns:Kaca10_S3_TR a ns:Translation ;
+    ns:translationText "yang dimaksud dengan bintang"^^xsd:string .
+
+ns:Kaca10_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca10 ;
+    ns:hasOriginalScript ns:Kaca10_S4_OS ;
+    ns:hasTranslation ns:Kaca10_S4_TR ;
+    ns:hasTransliteration ns:Kaca10_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca10_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦧꦚꦸ ꦈꦫꦶꦥ꧀ ꦥꦶꦤꦁꦏꦚ"^^xsd:string .
+
+ns:Kaca10_S4_TL a ns:Transliteration ;
+    ns:transliterationText "banyu urip pinangkanya"^^xsd:string .
+
+ns:Kaca10_S4_TR a ns:Translation ;
+    ns:translationText "yaitu asal air kehidupan"^^xsd:string .
+
+ns:Kaca10_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca10 ;
+    ns:hasOriginalScript ns:Kaca10_S5_OS ;
+    ns:hasTranslation ns:Kaca10_S5_TR ;
+    ns:hasTransliteration ns:Kaca10_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca10_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦠꦸꦩꦶꦧ ꦧꦸꦩꦶ ꦫꦄꦩꦠ꧀"^^xsd:string .
+
+ns:Kaca10_S5_TL a ns:Transliteration ;
+    ns:transliterationText "tumiba bumi rahmat"^^xsd:string .
+
+ns:Kaca10_S5_TR a ns:Translation ;
+    ns:translationText "yang jatuh ke bumi dan mendapat rahmat"^^xsd:string .
+
+ns:Kaca10_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca10 ;
+    ns:hasOriginalScript ns:Kaca10_S6_OS ;
+    ns:hasTranslation ns:Kaca10_S6_TR ;
+    ns:hasTransliteration ns:Kaca10_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca10_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦮꦢꦶꦧꦺ ꦲꦢꦸꦱ꧀ ꦥꦸꦤꦶꦏꦸ"^^xsd:string .
+
+ns:Kaca10_S6_TL a ns:Transliteration ;
+    ns:transliterationText "wajibe adus puniku"^^xsd:string .
+
+ns:Kaca10_S6_TR a ns:Translation ;
+    ns:translationText "kemudian juga kewajiban untuk mandi keramas tersebut"^^xsd:string .
+
+ns:Kaca10_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca10 ;
+    ns:hasOriginalScript ns:Kaca10_S7_OS ;
+    ns:hasTranslation ns:Kaca10_S7_TR ;
+    ns:hasTransliteration ns:Kaca10_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca10_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦤ ꦏꦁ ꦩꦺꦭꦸ ꦢꦶꦤꦸꦱꦤ꧀"^^xsd:string .
+
+ns:Kaca10_S7_TL a ns:Transliteration ;
+    ns:transliterationText "ana kang melu dinusan"^^xsd:string .
+
+ns:Kaca10_S7_TR a ns:Translation ;
+    ns:translationText "karena ada yang termandikan"^^xsd:string .
+
+ns:Kaca11_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca11 ;
+    ns:hasOriginalScript ns:Kaca11_S1_OS ;
+    ns:hasTranslation ns:Kaca11_S1_TR ;
+    ns:hasTransliteration ns:Kaca11_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca11_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦁ ꦩꦺꦭꦸ ꦏꦺꦢꦸꦱꦤ꧀ ꦪꦪꦶ"^^xsd:string .
+
+ns:Kaca11_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Kang melu kedusan yayi"^^xsd:string .
+
+ns:Kaca11_S1_TR a ns:Translation ;
+    ns:translationText "Yang turut termandikan adalah"^^xsd:string .
+
+ns:Kaca11_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca11 ;
+    ns:hasOriginalScript ns:Kaca11_S2_OS ;
+    ns:hasTranslation ns:Kaca11_S2_TR ;
+    ns:hasTransliteration ns:Kaca11_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca11_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦶꦥꦠ꧀ꦠꦺꦴꦭꦃ ꦲꦶꦁꦏꦁ ꦩꦸꦭꦾ"^^xsd:string .
+
+ns:Kaca11_S2_TL a ns:Transliteration ;
+    ns:transliterationText "sipattolah ingkang mulya"^^xsd:string .
+
+ns:Kaca11_S2_TR a ns:Translation ;
+    ns:translationText "sifat Allah yang mulia"^^xsd:string .
+
+ns:Kaca11_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca11 ;
+    ns:hasOriginalScript ns:Kaca11_S3_OS ;
+    ns:hasTranslation ns:Kaca11_S3_TR ;
+    ns:hasTransliteration ns:Kaca11_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca11_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦭꦮꦤ꧀ ꦢꦠꦺ ꦠ ꦩꦁꦏꦺꦴ"^^xsd:string .
+
+ns:Kaca11_S3_TL a ns:Transliteration ;
+    ns:transliterationText "kalawan date ta mangko"^^xsd:string .
+
+ns:Kaca11_S3_TR a ns:Translation ;
+    ns:translationText "dan zatnya"^^xsd:string .
+
+ns:Kaca11_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca11 ;
+    ns:hasOriginalScript ns:Kaca11_S4_OS ;
+    ns:hasTranslation ns:Kaca11_S4_TR ;
+    ns:hasTransliteration ns:Kaca11_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca11_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦭꦤ꧀ ꦱꦶꦥꦠ꧀ ꦥꦠꦁ ꦥꦿꦏꦫ"^^xsd:string .
+
+ns:Kaca11_S4_TL a ns:Transliteration ;
+    ns:transliterationText "lan sipat patang prakara"^^xsd:string .
+
+ns:Kaca11_S4_TR a ns:Translation ;
+    ns:translationText "serta sifat yang terdiri dari empat perkara"^^xsd:string .
+
+ns:Kaca11_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca11 ;
+    ns:hasOriginalScript ns:Kaca11_S5_OS ;
+    ns:hasTranslation ns:Kaca11_S5_TR ;
+    ns:hasTransliteration ns:Kaca11_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca11_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦭꦮꦤ꧀ ꦏꦁ ꦮꦸꦗꦸꦢ꧀ ꦠꦸꦁꦒꦭ꧀"^^xsd:string .
+
+ns:Kaca11_S5_TL a ns:Transliteration ;
+    ns:transliterationText "lawan kang wujud tunggal"^^xsd:string .
+
+ns:Kaca11_S5_TR a ns:Translation ;
+    ns:translationText "kemudian juga sifat ujud tunggal"^^xsd:string .
+
+ns:Kaca11_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca11 ;
+    ns:hasOriginalScript ns:Kaca11_S6_OS ;
+    ns:hasTranslation ns:Kaca11_S6_TR ;
+    ns:hasTransliteration ns:Kaca11_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca11_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦤꦺꦴꦫ ꦭꦺꦴꦫꦺꦴ ꦮꦸꦗꦸꦢ꧀ ꦲꦶꦏꦸ"^^xsd:string .
+
+ns:Kaca11_S6_TL a ns:Transliteration ;
+    ns:transliterationText "nora loro wujud iku"^^xsd:string .
+
+ns:Kaca11_S6_TR a ns:Translation ;
+    ns:translationText "tiada dua ujud itu"^^xsd:string .
+
+ns:Kaca11_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca11 ;
+    ns:hasOriginalScript ns:Kaca11_S7_OS ;
+    ns:hasTranslation ns:Kaca11_S7_TR ;
+    ns:hasTransliteration ns:Kaca11_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca11_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦤꦤꦶꦁ ꦦꦁ ꦗꦠꦶꦤꦶꦁ ꦱꦸꦏ꧀ꦩ"^^xsd:string .
+
+ns:Kaca11_S7_TL a ns:Transliteration ;
+    ns:transliterationText "nanging Hyang jatining sukma"^^xsd:string .
+
+ns:Kaca11_S7_TR a ns:Translation ;
+    ns:translationText "hanya satu yaitu sukma sejati"^^xsd:string .
+
+ns:Kaca12_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca12 ;
+    ns:hasOriginalScript ns:Kaca12_S1_OS ;
+    ns:hasTranslation ns:Kaca12_S1_TR ;
+    ns:hasTransliteration ns:Kaca12_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca12_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦺꦮꦶ ꦱꦸꦗꦶꦤꦃ ꦠꦸꦂꦤꦾ ꦫꦶꦪꦱ꧀"^^xsd:string .
+
+ns:Kaca12_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Dewi Sujinah turnya rias"^^xsd:string .
+
+ns:Kaca12_S1_TR a ns:Translation ;
+    ns:translationText "Dewi Sujinah berkata lembut"^^xsd:string .
+
+ns:Kaca12_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca12 ;
+    ns:hasOriginalScript ns:Kaca12_S2_OS ;
+    ns:hasTranslation ns:Kaca12_S2_TR ;
+    ns:hasTransliteration ns:Kaca12_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca12_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦁꦒꦶꦃ ꦭꦺꦫꦺꦱ꧀ ꦏꦂꦱ ꦠꦸꦮꦤ꧀"^^xsd:string .
+
+ns:Kaca12_S2_TL a ns:Transliteration ;
+    ns:transliterationText "inggih leres karsa tuwan"^^xsd:string .
+
+ns:Kaca12_S2_TR a ns:Translation ;
+    ns:translationText "benarlah apa yang diajarkan tuan"^^xsd:string .
+
+ns:Kaca12_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca12 ;
+    ns:hasOriginalScript ns:Kaca12_S3_OS ;
+    ns:hasTranslation ns:Kaca12_S3_TR ;
+    ns:hasTransliteration ns:Kaca12_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca12_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦩꦸꦁ ꦠꦸꦮꦤ꧀ ꦒꦸꦫꦸꦤꦶꦁꦺꦴꦁ"^^xsd:string .
+
+ns:Kaca12_S3_TL a ns:Transliteration ;
+    ns:transliterationText "amung tuwan guruningong"^^xsd:string .
+
+ns:Kaca12_S3_TR a ns:Translation ;
+    ns:translationText "hanya tuanlah guru hamba"^^xsd:string .
+
+ns:Kaca12_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca12 ;
+    ns:hasOriginalScript ns:Kaca12_S4_OS ;
+    ns:hasTranslation ns:Kaca12_S4_TR ;
+    ns:hasTransliteration ns:Kaca12_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca12_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦮꦸꦭ ꦩꦭꦶꦃ ꦠꦺꦠꦚ"^^xsd:string .
+
+ns:Kaca12_S4_TL a ns:Transliteration ;
+    ns:transliterationText "kawula malih tetanya"^^xsd:string .
+
+ns:Kaca12_S4_TR a ns:Translation ;
+    ns:translationText "ada pertanyaan lagi dari hamba"^^xsd:string .
+
+ns:Kaca12_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca12 ;
+    ns:hasOriginalScript ns:Kaca12_S5_OS ;
+    ns:hasTranslation ns:Kaca12_S5_TR ;
+    ns:hasTransliteration ns:Kaca12_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca12_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦺꦂꦤꦠꦤꦺ ꦲꦱꦭꦠ꧀"^^xsd:string .
+
+ns:Kaca12_S5_TL a ns:Transliteration ;
+    ns:transliterationText "pernatane asalat"^^xsd:string .
+
+ns:Kaca12_S5_TR a ns:Translation ;
+    ns:translationText "yakni mengenai aturan-aturan sholat"^^xsd:string .
+
+ns:Kaca12_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca12 ;
+    ns:hasOriginalScript ns:Kaca12_S6_OS ;
+    ns:hasTranslation ns:Kaca12_S6_TR ;
+    ns:hasTransliteration ns:Kaca12_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca12_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦁꦒꦶꦃ ꦏꦁ ꦏꦮꦸꦭ ꦱꦸꦮꦸꦤ꧀"^^xsd:string .
+
+ns:Kaca12_S6_TL a ns:Transliteration ;
+    ns:transliterationText "inggih kang kawula suwun"^^xsd:string .
+
+ns:Kaca12_S6_TR a ns:Translation ;
+    ns:translationText "itulah yang hamba pertanyakan"^^xsd:string .
+
+ns:Kaca12_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca12 ;
+    ns:hasOriginalScript ns:Kaca12_S7_OS ;
+    ns:hasTranslation ns:Kaca12_S7_TR ;
+    ns:hasTransliteration ns:Kaca12_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca12_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦩ꧀ꦥꦸꦂꦤ ꦏꦢꦶꦠꦸꦮꦤ꧀"^^xsd:string .
+
+ns:Kaca12_S7_TL a ns:Transliteration ;
+    ns:transliterationText "sampurna kadituwan"^^xsd:string .
+
+ns:Kaca12_S7_TR a ns:Translation ;
+    ns:translationText "agar hamba sempurna seperti tuan"^^xsd:string .
+
+ns:Kaca13_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca13 ;
+    ns:hasOriginalScript ns:Kaca13_S1_OS ;
+    ns:hasTranslation ns:Kaca13_S1_TR ;
+    ns:hasTransliteration ns:Kaca13_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca13_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦺꦴꦗꦂ ꦥꦤ꧀ꦝꦶꦠ ꦩꦸꦱ꧀ꦠꦏꦶꦩ꧀"^^xsd:string .
+
+ns:Kaca13_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Mojar pandhita Mustakim"^^xsd:string .
+
+ns:Kaca13_S1_TR a ns:Translation ;
+    ns:translationText "Pandita Mustakim menjawab"^^xsd:string .
+
+ns:Kaca13_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca13 ;
+    ns:hasOriginalScript ns:Kaca13_S2_OS ;
+    ns:hasTranslation ns:Kaca13_S2_TR ;
+    ns:hasTransliteration ns:Kaca13_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca13_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦪꦪꦶ ꦥꦺꦂꦤꦠꦤꦶꦁ ꦱꦭꦠ꧀"^^xsd:string .
+
+ns:Kaca13_S2_TL a ns:Transliteration ;
+    ns:transliterationText "yayi pernataning salat"^^xsd:string .
+
+ns:Kaca13_S2_TR a ns:Translation ;
+    ns:translationText "dinda peraturan sholat"^^xsd:string .
+
+ns:Kaca13_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca13 ;
+    ns:hasOriginalScript ns:Kaca13_S3_OS ;
+    ns:hasTranslation ns:Kaca13_S3_TR ;
+    ns:hasTransliteration ns:Kaca13_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca13_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦭꦶꦩꦁ ꦥꦂꦏꦫ ꦏꦠꦃꦺ"^^xsd:string .
+
+ns:Kaca13_S3_TL a ns:Transliteration ;
+    ns:transliterationText "limang parkara kathahe"^^xsd:string .
+
+ns:Kaca13_S3_TR a ns:Translation ;
+    ns:translationText "banyaknya ada lima"^^xsd:string .
+
+ns:Kaca13_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca13 ;
+    ns:hasOriginalScript ns:Kaca13_S4_OS ;
+    ns:hasTranslation ns:Kaca13_S4_TR ;
+    ns:hasTransliteration ns:Kaca13_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca13_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦏꦸ ꦱꦺꦗꦠꦶꦤꦶꦁ ꦠꦶꦁꦏꦃ"^^xsd:string .
+
+ns:Kaca13_S4_TL a ns:Transliteration ;
+    ns:transliterationText "iku sejatining tingkah"^^xsd:string .
+
+ns:Kaca13_S4_TR a ns:Translation ;
+    ns:translationText "itu sudah waji"^^xsd:string .
+
+ns:Kaca13_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca13 ;
+    ns:hasOriginalScript ns:Kaca13_S5_OS ;
+    ns:hasTranslation ns:Kaca13_S5_TR ;
+    ns:hasTransliteration ns:Kaca13_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca13_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦔꦢꦺꦒ꧀ ꦭꦮꦤ꧀ ꦭꦺꦁꦒꦃ"^^xsd:string .
+
+ns:Kaca13_S5_TL a ns:Transliteration ;
+    ns:transliterationText "angadeg lawan lenggah"^^xsd:string .
+
+ns:Kaca13_S5_TR a ns:Translation ;
+    ns:translationText "yaitu berdiri duduk"^^xsd:string .
+
+ns:Kaca13_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca13 ;
+    ns:hasOriginalScript ns:Kaca13_S6_OS ;
+    ns:hasTranslation ns:Kaca13_S6_TR ;
+    ns:hasTransliteration ns:Kaca13_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca13_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦫꦸꦏꦸꦏ꧀ ꦏꦺꦭꦮꦤ꧀ ꦱꦸꦗꦸꦢ꧀"^^xsd:string .
+
+ns:Kaca13_S6_TL a ns:Transliteration ;
+    ns:transliterationText "arukuk kelawan sujud"^^xsd:string .
+
+ns:Kaca13_S6_TR a ns:Translation ;
+    ns:translationText "membungkuk dan bersujud"^^xsd:string .
+
+ns:Kaca13_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca13 ;
+    ns:hasOriginalScript ns:Kaca13_S7_OS ;
+    ns:hasTranslation ns:Kaca13_S7_TR ;
+    ns:hasTransliteration ns:Kaca13_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca13_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦤꦶꦪꦠ꧀ ꦲꦶꦁꦏꦁ ꦱꦩ꧀ꦥꦸꦂꦤ"^^xsd:string .
+
+ns:Kaca13_S7_TL a ns:Transliteration ;
+    ns:transliterationText "aniyat ingkang sampurna"^^xsd:string .
+
+ns:Kaca13_S7_TR a ns:Translation ;
+    ns:translationText "dan disertai niat sempurna"^^xsd:string .
+
+ns:Kaca14_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca14 ;
+    ns:hasOriginalScript ns:Kaca14_S1_OS ;
+    ns:hasTranslation ns:Kaca14_S1_TR ;
+    ns:hasTransliteration ns:Kaca14_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca14_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦁ ꦌꦱ꧀ꦠꦿꦶ ꦈꦩꦠꦸꦂ ꦄꦫꦶꦱ꧀"^^xsd:string .
+
+ns:Kaca14_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Kang estri umatur aris"^^xsd:string .
+
+ns:Kaca14_S1_TR a ns:Translation ;
+    ns:translationText "Sang isteri bertanya sopan"^^xsd:string .
+
+ns:Kaca14_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca14 ;
+    ns:hasOriginalScript ns:Kaca14_S2_OS ;
+    ns:hasTranslation ns:Kaca14_S2_TR ;
+    ns:hasTransliteration ns:Kaca14_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca14_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦸꦤꦥ ꦗꦠꦶꦤꦶꦁ ꦤꦶꦪꦠ꧀"^^xsd:string .
+
+ns:Kaca14_S2_TL a ns:Transliteration ;
+    ns:transliterationText "punapa jatining niyat"^^xsd:string .
+
+ns:Kaca14_S2_TR a ns:Translation ;
+    ns:translationText "apakah yang dimaksud dengan niat"^^xsd:string .
+
+ns:Kaca14_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca14 ;
+    ns:hasOriginalScript ns:Kaca14_S3_OS ;
+    ns:hasTranslation ns:Kaca14_S3_TR ;
+    ns:hasTransliteration ns:Kaca14_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca14_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦌꦢꦠ꧀ ꦏꦁ ꦥꦺꦱ꧀ꦠꦶ ꦭꦁꦒꦺꦁꦺ"^^xsd:string .
+
+ns:Kaca14_S3_TL a ns:Transliteration ;
+    ns:transliterationText "edat kang pesthi langgenge"^^xsd:string .
+
+ns:Kaca14_S3_TR a ns:Translation ;
+    ns:translationText "dan apakah zat itu pasti kekal"^^xsd:string .
+
+ns:Kaca14_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca14 ;
+    ns:hasOriginalScript ns:Kaca14_S4_OS ;
+    ns:hasTranslation ns:Kaca14_S4_TR ;
+    ns:hasTransliteration ns:Kaca14_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca14_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦠꦸꦂ ꦤꦶ ꦢꦺꦮꦶ ꦱꦸꦗꦶꦤꦃ"^^xsd:string .
+
+ns:Kaca14_S4_TL a ns:Transliteration ;
+    ns:transliterationText "matur ni dewi Sujinah"^^xsd:string .
+
+ns:Kaca14_S4_TR a ns:Translation ;
+    ns:translationText "Dewi Sujinah bertanya kembali"^^xsd:string .
+
+ns:Kaca14_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca14 ;
+    ns:hasOriginalScript ns:Kaca14_S5_OS ;
+    ns:hasTranslation ns:Kaca14_S5_TR ;
+    ns:hasTransliteration ns:Kaca14_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca14_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦪꦺꦤ꧀ ꦔꦢꦺꦒ꧀ ꦄꦱꦭ꧀ ꦥꦸꦤꦥ"^^xsd:string .
+
+ns:Kaca14_S5_TL a ns:Transliteration ;
+    ns:transliterationText "yen ngadeg asal punapa"^^xsd:string .
+
+ns:Kaca14_S5_TR a ns:Translation ;
+    ns:translationText "kemudian dari mana asal berdiri itu"^^xsd:string .
+
+ns:Kaca14_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca14 ;
+    ns:hasOriginalScript ns:Kaca14_S6_OS ;
+    ns:hasTranslation ns:Kaca14_S6_TR ;
+    ns:hasTransliteration ns:Kaca14_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca14_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦫꦗ ꦥꦤ꧀ꦝꦶꦠ ꦄꦩꦸꦮꦸꦱ꧀ ꦄꦔꦢꦺꦒ꧀ ꦄꦱꦭ꧀ ꦢꦲꦤ"^^xsd:string .
+
+ns:Kaca14_S6_TL a ns:Transliteration ;
+    ns:transliterationText "raja pandhita amuwus angadeg asal dahana"^^xsd:string .
+
+ns:Kaca14_S6_TR a ns:Translation ;
+    ns:translationText "raja pandita menjawab"^^xsd:string .
+
+ns:Kaca14_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca14 ;
+    ns:hasOriginalScript ns:Kaca14_S7_OS ;
+    ns:hasTranslation ns:Kaca14_S7_TR ;
+    ns:hasTransliteration ns:Kaca14_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca14_S7_OS a ns:OriginalScript ;
+    ns:originalText ""^^xsd:string .
+
+ns:Kaca14_S7_TL a ns:Transliteration ;
+    ns:transliterationText ""^^xsd:string .
+
+ns:Kaca14_S7_TR a ns:Translation ;
+    ns:translationText "berdiri berasal dari api"^^xsd:string .
+
+ns:Kaca15_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca15 ;
+    ns:hasOriginalScript ns:Kaca15_S1_OS ;
+    ns:hasTranslation ns:Kaca15_S1_TR ;
+    ns:hasTransliteration ns:Kaca15_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca15_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦏꦺꦤ ꦩꦠꦶ"^^xsd:string .
+
+ns:Kaca15_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Dudu geni kena mati"^^xsd:string .
+
+ns:Kaca15_S1_TR a ns:Translation ;
+    ns:translationText "Bukan api yang dapat padam"^^xsd:string .
+
+ns:Kaca15_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca15 ;
+    ns:hasOriginalScript ns:Kaca15_S2_OS ;
+    ns:hasTranslation ns:Kaca15_S2_TR ;
+    ns:hasTransliteration ns:Kaca15_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca15_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦤ꧀ ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦏꦺꦩꦱꦤ꧀"^^xsd:string .
+
+ns:Kaca15_S2_TL a ns:Transliteration ;
+    ns:transliterationText "pan dudu geni kemasan"^^xsd:string .
+
+ns:Kaca15_S2_TR a ns:Translation ;
+    ns:translationText "juga bukan api yang sudah jadi"^^xsd:string .
+
+ns:Kaca15_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca15 ;
+    ns:hasOriginalScript ns:Kaca15_S3_OS ;
+    ns:hasTranslation ns:Kaca15_S3_TR ;
+    ns:hasTransliteration ns:Kaca15_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca15_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦏꦁ ꦒꦶꦤꦮꦺ"^^xsd:string .
+
+ns:Kaca15_S3_TL a ns:Transliteration ;
+    ns:transliterationText "dudu geni kang ginawe"^^xsd:string .
+
+ns:Kaca15_S3_TR a ns:Translation ;
+    ns:translationText "bukan pula api buatan"^^xsd:string .
+
+ns:Kaca15_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca15 ;
+    ns:hasOriginalScript ns:Kaca15_S4_OS ;
+    ns:hasTranslation ns:Kaca15_S4_TR ;
+    ns:hasTransliteration ns:Kaca15_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca15_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦒꦶꦁꦱꦶꦂ ꦎꦮꦃ"^^xsd:string .
+
+ns:Kaca15_S4_TL a ns:Transliteration ;
+    ns:transliterationText "dudu geni gingsir owah"^^xsd:string .
+
+ns:Kaca15_S4_TR a ns:Translation ;
+    ns:translationText "bukan api yang dapat digeser"^^xsd:string .
+
+ns:Kaca15_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca15 ;
+    ns:hasOriginalScript ns:Kaca15_S5_OS ;
+    ns:hasTranslation ns:Kaca15_S5_TR ;
+    ns:hasTransliteration ns:Kaca15_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca15_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦭꦤ꧀ ꦢꦸꦢꦸ ꦒꦺꦤꦶꦤꦺ ꦏꦮꦃ"^^xsd:string .
+
+ns:Kaca15_S5_TL a ns:Transliteration ;
+    ns:transliterationText "lan dudu genine kawah"^^xsd:string .
+
+ns:Kaca15_S5_TR a ns:Translation ;
+    ns:translationText "bukan api dari kawah"^^xsd:string .
+
+ns:Kaca15_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca15 ;
+    ns:hasOriginalScript ns:Kaca15_S6_OS ;
+    ns:hasTranslation ns:Kaca15_S6_TR ;
+    ns:hasTransliteration ns:Kaca15_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca15_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦱꦁꦏꦶꦁ ꦮꦠꦸ"^^xsd:string .
+
+ns:Kaca15_S6_TL a ns:Transliteration ;
+    ns:transliterationText "dudu geni sangking watu"^^xsd:string .
+
+ns:Kaca15_S6_TR a ns:Translation ;
+    ns:translationText "bukan api dari batu"^^xsd:string .
+
+ns:Kaca15_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca15 ;
+    ns:hasOriginalScript ns:Kaca15_S7_OS ;
+    ns:hasTranslation ns:Kaca15_S7_TR ;
+    ns:hasTransliteration ns:Kaca15_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca15_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦄꦥꦤ꧀ ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦒꦺꦭꦥ꧀"^^xsd:string .
+
+ns:Kaca15_S7_TL a ns:Transliteration ;
+    ns:transliterationText "apan dudu geni gelap"^^xsd:string .
+
+ns:Kaca15_S7_TR a ns:Translation ;
+    ns:translationText "juga bukan api yang menerangi kegelapan"^^xsd:string .
+
+ns:Kaca16_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca16 ;
+    ns:hasOriginalScript ns:Kaca16_S1_OS ;
+    ns:hasTranslation ns:Kaca16_S1_TR ;
+    ns:hasTransliteration ns:Kaca16_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca16_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦒꦺꦒꦺꦴꦱ꧀ꦒꦤ꧀"^^xsd:string .
+
+ns:Kaca16_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Dudu geni gegosongan"^^xsd:string .
+
+ns:Kaca16_S1_TR a ns:Translation ;
+    ns:translationText "Bukan api yang membuat hangus"^^xsd:string .
+
+ns:Kaca16_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca16 ;
+    ns:hasOriginalScript ns:Kaca16_S2_OS ;
+    ns:hasTranslation ns:Kaca16_S2_TR ;
+    ns:hasTransliteration ns:Kaca16_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca16_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦱꦁꦏꦶꦁ ꦄꦂꦒ"^^xsd:string .
+
+ns:Kaca16_S2_TL a ns:Transliteration ;
+    ns:transliterationText "dudu geni sangking arga"^^xsd:string .
+
+ns:Kaca16_S2_TR a ns:Translation ;
+    ns:translationText "bukan api yang berasal dari gunung"^^xsd:string .
+
+ns:Kaca16_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca16 ;
+    ns:hasOriginalScript ns:Kaca16_S3_OS ;
+    ns:hasTranslation ns:Kaca16_S3_TR ;
+    ns:hasTransliteration ns:Kaca16_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca16_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦱꦧꦁꦱꦤꦺ"^^xsd:string .
+
+ns:Kaca16_S3_TL a ns:Transliteration ;
+    ns:transliterationText "dudu geni sabangsane"^^xsd:string .
+
+ns:Kaca16_S3_TR a ns:Translation ;
+    ns:translationText "bukan api seperti api yang lain"^^xsd:string .
+
+ns:Kaca16_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca16 ;
+    ns:hasOriginalScript ns:Kaca16_S4_OS ;
+    ns:hasTranslation ns:Kaca16_S4_TR ;
+    ns:hasTransliteration ns:Kaca16_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca16_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦭꦤ꧀ ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦄꦒꦫꦤ꧀"^^xsd:string .
+
+ns:Kaca16_S4_TL a ns:Transliteration ;
+    ns:transliterationText "Ian dudu geni agaran"^^xsd:string .
+
+ns:Kaca16_S4_TR a ns:Translation ;
+    ns:translationText "dan bukan api untuk memanggang"^^xsd:string .
+
+ns:Kaca16_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca16 ;
+    ns:hasOriginalScript ns:Kaca16_S5_OS ;
+    ns:hasTranslation ns:Kaca16_S5_TR ;
+    ns:hasTransliteration ns:Kaca16_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca16_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦢꦸꦢꦸ ꦒꦺꦤꦶ ꦩꦸꦗꦶꦗꦠ꧀"^^xsd:string .
+
+ns:Kaca16_S5_TL a ns:Transliteration ;
+    ns:transliterationText "dudu geni mujijat"^^xsd:string .
+
+ns:Kaca16_S5_TR a ns:Translation ;
+    ns:translationText "bukan api mukjijat"^^xsd:string .
+
+ns:Kaca16_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca16 ;
+    ns:hasOriginalScript ns:Kaca16_S6_OS ;
+    ns:hasTranslation ns:Kaca16_S6_TR ;
+    ns:hasTransliteration ns:Kaca16_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca16_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦺꦗꦠꦶꦤꦺ ꦒꦺꦤꦶ ꦲꦶꦏꦸ"^^xsd:string .
+
+ns:Kaca16_S6_TL a ns:Transliteration ;
+    ns:transliterationText "sejatine geni iku"^^xsd:string .
+
+ns:Kaca16_S6_TR a ns:Translation ;
+    ns:translationText "sesungguhnya yang dimaksud api"^^xsd:string .
+
+ns:Kaca16_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca16 ;
+    ns:hasOriginalScript ns:Kaca16_S7_OS ;
+    ns:hasTranslation ns:Kaca16_S7_TR ;
+    ns:hasTransliteration ns:Kaca16_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca16_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦄꦏ꧀ꦱꦫ ꦄꦭꦶꦥ꧀ ꦏꦁ ꦩꦸꦭꦾ"^^xsd:string .
+
+ns:Kaca16_S7_TL a ns:Transliteration ;
+    ns:transliterationText "aksara alip kang mulya"^^xsd:string .
+
+ns:Kaca16_S7_TR a ns:Translation ;
+    ns:translationText "adalah huruf alip yang mulia"^^xsd:string .
+
+ns:Kaca17_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca17 ;
+    ns:hasOriginalScript ns:Kaca17_S1_OS ;
+    ns:hasTranslation ns:Kaca17_S1_TR ;
+    ns:hasTransliteration ns:Kaca17_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca17_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦪ ꦄꦭꦶꦥ꧀ ꦠꦺꦒꦺꦱꦺ ꦈꦫꦶꦥ꧀"^^xsd:string .
+
+ns:Kaca17_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Ya alip tegese urip"^^xsd:string .
+
+ns:Kaca17_S1_TR a ns:Translation ;
+    ns:translationText "Alip itu artinya hidup"^^xsd:string .
+
+ns:Kaca17_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca17 ;
+    ns:hasOriginalScript ns:Kaca17_S2_OS ;
+    ns:hasTranslation ns:Kaca17_S2_TR ;
+    ns:hasTransliteration ns:Kaca17_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca17_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦈꦫꦶꦥꦺ ꦠꦤ꧀ ꦏꦺꦤ ꦥꦺꦗꦃ"^^xsd:string .
+
+ns:Kaca17_S2_TL a ns:Transliteration ;
+    ns:transliterationText "uripe tan kena pejah"^^xsd:string .
+
+ns:Kaca17_S2_TR a ns:Translation ;
+    ns:translationText "hidupnya tidak pernah padam"^^xsd:string .
+
+ns:Kaca17_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca17 ;
+    ns:hasOriginalScript ns:Kaca17_S3_OS ;
+    ns:hasTranslation ns:Kaca17_S3_TR ;
+    ns:hasTransliteration ns:Kaca17_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca17_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦏꦸ ꦕꦲꦾ ꦱꦺꦗꦠꦶꦤꦺ"^^xsd:string .
+
+ns:Kaca17_S3_TL a ns:Transliteration ;
+    ns:transliterationText "iku cahya sejatine"^^xsd:string .
+
+ns:Kaca17_S3_TR a ns:Translation ;
+    ns:translationText "itulah cahaya yang terang"^^xsd:string .
+
+ns:Kaca17_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca17 ;
+    ns:hasOriginalScript ns:Kaca17_S4_OS ;
+    ns:hasTranslation ns:Kaca17_S4_TR ;
+    ns:hasTransliteration ns:Kaca17_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca17_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦁ ꦥꦝꦁ ꦄꦫꦤ꧀ ꦱꦶꦂꦫꦸꦭ꧀ꦭꦃ"^^xsd:string .
+
+ns:Kaca17_S4_TL a ns:Transliteration ;
+    ns:transliterationText "kang padhang aran Sirrullah"^^xsd:string .
+
+ns:Kaca17_S4_TR a ns:Translation ;
+    ns:translationText "dinamakan Sirrullah"^^xsd:string .
+
+ns:Kaca17_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca17 ;
+    ns:hasOriginalScript ns:Kaca17_S5_OS ;
+    ns:hasTranslation ns:Kaca17_S5_TR ;
+    ns:hasTransliteration ns:Kaca17_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca17_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦪꦶꦏꦸ ꦮꦺꦗꦁꦶꦁꦮꦁ"^^xsd:string .
+
+ns:Kaca17_S5_TL a ns:Transliteration ;
+    ns:transliterationText "yaiku wejangingwang"^^xsd:string .
+
+ns:Kaca17_S5_TR a ns:Translation ;
+    ns:translationText "begitulah penjelasanku"^^xsd:string .
+
+ns:Kaca17_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca17 ;
+    ns:hasOriginalScript ns:Kaca17_S6_OS ;
+    ns:hasTranslation ns:Kaca17_S6_TR ;
+    ns:hasTransliteration ns:Kaca17_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca17_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦁ ꦒꦂꦮ ꦤꦸꦁꦏꦺꦩꦶ ꦱꦸꦏꦸ"^^xsd:string .
+
+ns:Kaca17_S6_TL a ns:Transliteration ;
+    ns:transliterationText "kang garwa nungkemi suku"^^xsd:string .
+
+ns:Kaca17_S6_TR a ns:Translation ;
+    ns:translationText "kemudian sang isteri menyembah sujud"^^xsd:string .
+
+ns:Kaca17_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca17 ;
+    ns:hasOriginalScript ns:Kaca17_S7_OS ;
+    ns:hasTranslation ns:Kaca17_S7_TR ;
+    ns:hasTransliteration ns:Kaca17_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca17_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦁꦒꦶꦃ ꦭꦺꦫꦺꦱ꧀ ꦏꦂꦱ ꦠꦸꦮꦤ꧀"^^xsd:string .
+
+ns:Kaca17_S7_TL a ns:Transliteration ;
+    ns:transliterationText "inggih leres karsa tuwan"^^xsd:string .
+
+ns:Kaca17_S7_TR a ns:Translation ;
+    ns:translationText "benarlah apa yang tuan katakan"^^xsd:string .
+
+ns:Kaca18_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca18 ;
+    ns:hasOriginalScript ns:Kaca18_S1_OS ;
+    ns:hasTranslation ns:Kaca18_S1_TR ;
+    ns:hasTransliteration ns:Kaca18_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca18_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦮꦺꦴꦤ꧀ꦠꦺꦤ꧀ ꦄꦠꦸꦂ ꦏꦸꦭ ꦩꦭꦶꦃ"^^xsd:string .
+
+ns:Kaca18_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Wonten atur kula malih"^^xsd:string .
+
+ns:Kaca18_S1_TR a ns:Translation ;
+    ns:translationText "Ada pertanyaan lagi dari hamba"^^xsd:string .
+
+ns:Kaca18_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca18 ;
+    ns:hasOriginalScript ns:Kaca18_S2_OS ;
+    ns:hasTranslation ns:Kaca18_S2_TR ;
+    ns:hasTransliteration ns:Kaca18_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca18_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦠꦺꦒꦺꦱꦺ ꦫꦸꦏꦸꦏ꧀ ꦥꦸꦤꦶꦏ"^^xsd:string .
+
+ns:Kaca18_S2_TL a ns:Transliteration ;
+    ns:transliterationText "tegese rukuk punika"^^xsd:string .
+
+ns:Kaca18_S2_TR a ns:Translation ;
+    ns:translationText "apakah artinya sujud itu"^^xsd:string .
+
+ns:Kaca18_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca18 ;
+    ns:hasOriginalScript ns:Kaca18_S3_OS ;
+    ns:hasTranslation ns:Kaca18_S3_TR ;
+    ns:hasTransliteration ns:Kaca18_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca18_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦫꦗ ꦥꦤ꧀ꦝꦶꦠ ꦮꦸꦮꦸꦱꦺ"^^xsd:string .
+
+ns:Kaca18_S3_TL a ns:Transliteration ;
+    ns:transliterationText "raja pandhita wuwuse"^^xsd:string .
+
+ns:Kaca18_S3_TR a ns:Translation ;
+    ns:translationText "raja pandita menjawab"^^xsd:string .
+
+ns:Kaca18_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca18 ;
+    ns:hasOriginalScript ns:Kaca18_S4_OS ;
+    ns:hasTranslation ns:Kaca18_S4_TR ;
+    ns:hasTransliteration ns:Kaca18_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca18_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦪꦪꦶ ꦩꦤꦶꦫ ꦩꦶꦪꦂꦱ"^^xsd:string .
+
+ns:Kaca18_S4_TL a ns:Transliteration ;
+    ns:transliterationText "yayi manira miyarsa"^^xsd:string .
+
+ns:Kaca18_S4_TR a ns:Translation ;
+    ns:translationText "karena isteriku hanya dirimu"^^xsd:string .
+
+ns:Kaca18_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca18 ;
+    ns:hasOriginalScript ns:Kaca18_S5_OS ;
+    ns:hasTranslation ns:Kaca18_S5_TR ;
+    ns:hasTransliteration ns:Kaca18_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca18_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦠꦺꦒꦺꦱꦺ ꦫꦸꦏꦸꦏ꧀ ꦲꦶꦏ"^^xsd:string .
+
+ns:Kaca18_S5_TL a ns:Transliteration ;
+    ns:transliterationText "tegese rukuk ika"^^xsd:string .
+
+ns:Kaca18_S5_TR a ns:Translation ;
+    ns:translationText "baiklah aku jelaskan"^^xsd:string .
+
+ns:Kaca18_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca18 ;
+    ns:hasOriginalScript ns:Kaca18_S6_OS ;
+    ns:hasTranslation ns:Kaca18_S6_TR ;
+    ns:hasTransliteration ns:Kaca18_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca18_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦄꦩꦸꦁ ꦱꦶꦫ ꦒꦂꦮꦤꦶꦁꦱꦸꦤ꧀"^^xsd:string .
+
+ns:Kaca18_S6_TL a ns:Transliteration ;
+    ns:transliterationText "amung sira garwaningsun"^^xsd:string .
+
+ns:Kaca18_S6_TR a ns:Translation ;
+    ns:translationText "dinda dengarlah"^^xsd:string .
+
+ns:Kaca18_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca18 ;
+    ns:hasOriginalScript ns:Kaca18_S7_OS ;
+    ns:hasTranslation ns:Kaca18_S7_TR ;
+    ns:hasTransliteration ns:Kaca18_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca18_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦿꦪꦺꦴꦒ ꦲꦶꦁꦱꦸꦤ꧀ ꦮꦸꦫꦸꦏ"^^xsd:string .
+
+ns:Kaca18_S7_TL a ns:Transliteration ;
+    ns:transliterationText "prayoga ingsun wuruka"^^xsd:string .
+
+ns:Kaca18_S7_TR a ns:Translation ;
+    ns:translationText "arti dari sujud itu"^^xsd:string .
+
+ns:Kaca1_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca1 ;
+    ns:hasOriginalScript ns:Kaca1_S1_OS ;
+    ns:hasTranslation ns:Kaca1_S1_TR ;
+    ns:hasTransliteration ns:Kaca1_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca1_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦮꦺꦴꦤ꧀ꦠꦺꦤ꧀ ꦕꦫꦶꦠ ꦮꦶꦤꦂꦤꦶ"^^xsd:string .
+
+ns:Kaca1_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Wonten carita winarni"^^xsd:string .
+
+ns:Kaca1_S1_TR a ns:Translation ;
+    ns:translationText "Ada suatu cerita mengenai"^^xsd:string .
+
+ns:Kaca1_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca1 ;
+    ns:hasOriginalScript ns:Kaca1_S2_OS ;
+    ns:hasTranslation ns:Kaca1_S2_TR ;
+    ns:hasTransliteration ns:Kaca1_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca1_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦿꦮꦺꦱ꧀ꦠꦿꦶ ꦧꦼꦏ꧀ꦠꦶ ꦩꦿꦶꦁ ꦥꦿꦶꦪ"^^xsd:string .
+
+ns:Kaca1_S2_TL a ns:Transliteration ;
+    ns:transliterationText "prawestri bekti mring priya"^^xsd:string .
+
+ns:Kaca1_S2_TR a ns:Translation ;
+    ns:translationText "seorang perempuan yang berbakti kepada suami"^^xsd:string .
+
+ns:Kaca1_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca1 ;
+    ns:hasOriginalScript ns:Kaca1_S3_OS ;
+    ns:hasTranslation ns:Kaca1_S3_TR ;
+    ns:hasTransliteration ns:Kaca1_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca1_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦫꦧꦶꦤꦺ ꦥꦤ꧀ꦝꦶꦠ ꦏꦎꦠ꧀"^^xsd:string .
+
+ns:Kaca1_S3_TL a ns:Transliteration ;
+    ns:transliterationText "rabine pandhita kaot"^^xsd:string .
+
+ns:Kaca1_S3_TR a ns:Translation ;
+    ns:translationText "isteri dari seorang pendeta"^^xsd:string .
+
+ns:Kaca1_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca1 ;
+    ns:hasOriginalScript ns:Kaca1_S4_OS ;
+    ns:hasTranslation ns:Kaca1_S4_TR ;
+    ns:hasTransliteration ns:Kaca1_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca1_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦭꦁꦏꦸꦁ ꦢꦺꦚ ꦈꦠꦩ"^^xsd:string .
+
+ns:Kaca1_S4_TL a ns:Transliteration ;
+    ns:transliterationText "kalangkung denya utama"^^xsd:string .
+
+ns:Kaca1_S4_TR a ns:Translation ;
+    ns:translationText "yang melebihi kebanyakan orang dan sangat utama"^^xsd:string .
+
+ns:Kaca1_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca1 ;
+    ns:hasOriginalScript ns:Kaca1_S5_OS ;
+    ns:hasTranslation ns:Kaca1_S5_TR ;
+    ns:hasTransliteration ns:Kaca1_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca1_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦫꦤ꧀ ꦢꦺꦮꦶ ꦱꦸꦗꦶꦤꦃ"^^xsd:string .
+
+ns:Kaca1_S5_TL a ns:Transliteration ;
+    ns:transliterationText "aran dewi Sujinah"^^xsd:string .
+
+ns:Kaca1_S5_TR a ns:Translation ;
+    ns:translationText "perempuan tersebut bernama dewi Sujinah"^^xsd:string .
+
+ns:Kaca1_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca1 ;
+    ns:hasOriginalScript ns:Kaca1_S6_OS ;
+    ns:hasTranslation ns:Kaca1_S6_TR ;
+    ns:hasTransliteration ns:Kaca1_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca1_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦏꦸ ꦥꦿꦶꦪꦺꦴꦒ ꦠꦶꦤꦶꦫꦸ"^^xsd:string .
+
+ns:Kaca1_S6_TL a ns:Transliteration ;
+    ns:transliterationText "iku priyoga tiniru"^^xsd:string .
+
+ns:Kaca1_S6_TR a ns:Translation ;
+    ns:translationText "ia patut untuk diteladani"^^xsd:string .
+
+ns:Kaca1_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca1 ;
+    ns:hasOriginalScript ns:Kaca1_S7_OS ;
+    ns:hasTranslation ns:Kaca1_S7_TR ;
+    ns:hasTransliteration ns:Kaca1_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca1_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦮꦺꦱ꧀ꦠꦿꦶ ꦧꦼꦏ꧀ꦠꦶ ꦩꦿꦶꦁ ꦥꦿꦶꦪ"^^xsd:string .
+
+ns:Kaca1_S7_TL a ns:Transliteration ;
+    ns:transliterationText "pawestri bekti mring priya"^^xsd:string .
+
+ns:Kaca1_S7_TR a ns:Translation ;
+    ns:translationText "sebagai seorang isteri yang berbakti kepada suami"^^xsd:string .
+
+ns:Kaca2_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca2 ;
+    ns:hasOriginalScript ns:Kaca2_S1_OS ;
+    ns:hasTranslation ns:Kaca2_S1_TR ;
+    ns:hasTransliteration ns:Kaca2_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca2_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦸꦭꦤꦺ ꦌꦱ꧀ꦠꦿꦶ ꦲꦭꦏꦶ"^^xsd:string .
+
+ns:Kaca2_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Mulane estri alaki"^^xsd:string .
+
+ns:Kaca2_S1_TR a ns:Translation ;
+    ns:translationText "Oleh sebab itu menjadi seorang isteri"^^xsd:string .
+
+ns:Kaca2_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca2 ;
+    ns:hasOriginalScript ns:Kaca2_S2_OS ;
+    ns:hasTranslation ns:Kaca2_S2_TR ;
+    ns:hasTransliteration ns:Kaca2_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca2_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦩꦿꦶꦃ ꦏꦕꦁꦏꦶꦁ ꦲꦶꦁ ꦥꦿꦶꦪ"^^xsd:string .
+
+ns:Kaca2_S2_TL a ns:Transliteration ;
+    ns:transliterationText "amrih kacangking ing priya"^^xsd:string .
+
+ns:Kaca2_S2_TR a ns:Translation ;
+    ns:translationText "supaya dapat mengimbangi kedudukan suami"^^xsd:string .
+
+ns:Kaca2_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca2 ;
+    ns:hasOriginalScript ns:Kaca2_S3_OS ;
+    ns:hasTranslation ns:Kaca2_S3_TR ;
+    ns:hasTransliteration ns:Kaca2_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca2_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦗ ꦩꦸꦧꦸꦁ ꦢꦸꦚ ꦧꦄ"^^xsd:string .
+
+ns:Kaca2_S3_TL a ns:Transliteration ;
+    ns:transliterationText "aja muhung dunya bae"^^xsd:string .
+
+ns:Kaca2_S3_TR a ns:Translation ;
+    ns:translationText "jangan hanya memikirkan masalan duniawi saja"^^xsd:string .
+
+ns:Kaca2_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca2 ;
+    ns:hasOriginalScript ns:Kaca2_S4_OS ;
+    ns:hasTranslation ns:Kaca2_S4_TR ;
+    ns:hasTransliteration ns:Kaca2_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca2_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦤꦺꦏ꧀ ꦠꦺꦏ ꦢꦸꦚ ꦲꦏ꧀ꦲꦺꦫꦺꦠ꧀"^^xsd:string .
+
+ns:Kaca2_S4_TL a ns:Transliteration ;
+    ns:transliterationText "nek teka dunya akheret"^^xsd:string .
+
+ns:Kaca2_S4_TR a ns:Translation ;
+    ns:translationText "tetapi juga masalah akherat"^^xsd:string .
+
+ns:Kaca2_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca2 ;
+    ns:hasOriginalScript ns:Kaca2_S5_OS ;
+    ns:hasTranslation ns:Kaca2_S5_TR ;
+    ns:hasTransliteration ns:Kaca2_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca2_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦠꦤ꧀ ꦲꦂꦱ ꦩꦭꦺꦕꦄ"^^xsd:string .
+
+ns:Kaca2_S5_TL a ns:Transliteration ;
+    ns:transliterationText "tan arsa malecaa"^^xsd:string .
+
+ns:Kaca2_S5_TR a ns:Translation ;
+    ns:translationText "agar tidak terpelecok"^^xsd:string .
+
+ns:Kaca2_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca2 ;
+    ns:hasOriginalScript ns:Kaca2_S6_OS ;
+    ns:hasTranslation ns:Kaca2_S6_TR ;
+    ns:hasTransliteration ns:Kaca2_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca2_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦸꦭꦤꦺ ꦒꦼꦒꦸꦫꦸ ꦏꦏꦸꦁ"^^xsd:string .
+
+ns:Kaca2_S6_TL a ns:Transliteration ;
+    ns:transliterationText "mulane geguru kakung"^^xsd:string .
+
+ns:Kaca2_S6_TR a ns:Translation ;
+    ns:translationText "jadi bergurulah kepada suami"^^xsd:string .
+
+ns:Kaca2_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca2 ;
+    ns:hasOriginalScript ns:Kaca2_S7_OS ;
+    ns:hasTranslation ns:Kaca2_S7_TR ;
+    ns:hasTransliteration ns:Kaca2_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca2_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦩꦿꦶꦃ ꦱꦩ꧀ꦥꦸꦂꦤꦤꦶꦁ ꦏꦿꦩ"^^xsd:string .
+
+ns:Kaca2_S7_TL a ns:Transliteration ;
+    ns:transliterationText "amrih sampurnaning krama"^^xsd:string .
+
+ns:Kaca2_S7_TR a ns:Translation ;
+    ns:translationText "supaya sempurna dalam berumah tangga"^^xsd:string .
+
+ns:Kaca3_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca3 ;
+    ns:hasOriginalScript ns:Kaca3_S1_OS ;
+    ns:hasTranslation ns:Kaca3_S1_TR ;
+    ns:hasTransliteration ns:Kaca3_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca3_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦁ ꦢꦺꦮꦶ ꦈꦩꦠꦸꦂ ꦲꦫꦶꦱ꧀"^^xsd:string .
+
+ns:Kaca3_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Sang dewi umatur aris"^^xsd:string .
+
+ns:Kaca3_S1_TR a ns:Translation ;
+    ns:translationText "Sang dewi berkata sopan"^^xsd:string .
+
+ns:Kaca3_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca3 ;
+    ns:hasOriginalScript ns:Kaca3_S2_OS ;
+    ns:hasTranslation ns:Kaca3_S2_TR ;
+    ns:hasTransliteration ns:Kaca3_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca3_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦠꦏꦺꦴꦤ꧀ ꦗꦿꦺꦴꦤꦶꦁ ꦥꦥꦿꦺꦩꦤ꧀"^^xsd:string .
+
+ns:Kaca3_S2_TL a ns:Transliteration ;
+    ns:transliterationText "atakon jroning papreman"^^xsd:string .
+
+ns:Kaca3_S2_TR a ns:Translation ;
+    ns:translationText "bertanya di saat berbaring di tempat tidur"^^xsd:string .
+
+ns:Kaca3_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca3 ;
+    ns:hasOriginalScript ns:Kaca3_S3_OS ;
+    ns:hasTranslation ns:Kaca3_S3_TR ;
+    ns:hasTransliteration ns:Kaca3_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca3_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦤ꧀ꦢꦶꦏ ꦫꦧꦶ ꦩꦫꦶꦁꦺꦴꦁ"^^xsd:string .
+
+ns:Kaca3_S3_TL a ns:Transliteration ;
+    ns:transliterationText "andika rabi maringong"^^xsd:string .
+
+ns:Kaca3_S3_TR a ns:Translation ;
+    ns:translationText "paduka mengawini hamba"^^xsd:string .
+
+ns:Kaca3_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca3 ;
+    ns:hasOriginalScript ns:Kaca3_S4_OS ;
+    ns:hasTranslation ns:Kaca3_S4_TR ;
+    ns:hasTransliteration ns:Kaca3_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca3_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦸꦭ ꦏꦶꦤꦂꦪ ꦥꦸꦤꦥ"^^xsd:string .
+
+ns:Kaca3_S4_TL a ns:Transliteration ;
+    ns:transliterationText "kula kinarya punapa"^^xsd:string .
+
+ns:Kaca3_S4_TR a ns:Translation ;
+    ns:translationText "untuk apakah itu semua"^^xsd:string .
+
+ns:Kaca3_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca3 ;
+    ns:hasOriginalScript ns:Kaca3_S5_OS ;
+    ns:hasTranslation ns:Kaca3_S5_TR ;
+    ns:hasTransliteration ns:Kaca3_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca3_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦮꦸꦭ ꦚꦸꦮꦸꦤ꧀ ꦮꦺꦗꦁ"^^xsd:string .
+
+ns:Kaca3_S5_TL a ns:Transliteration ;
+    ns:transliterationText "kawula nyuwun wejang"^^xsd:string .
+
+ns:Kaca3_S5_TR a ns:Translation ;
+    ns:translationText "hamba mohon petunjuk"^^xsd:string .
+
+ns:Kaca3_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca3 ;
+    ns:hasOriginalScript ns:Kaca3_S6_OS ;
+    ns:hasTranslation ns:Kaca3_S6_TR ;
+    ns:hasTransliteration ns:Kaca3_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca3_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦪꦺꦤ꧀ ꦮꦸꦱ꧀ ꦥꦤ꧀ꦒꦶꦃ ꦭꦮꦤ꧀ ꦲꦶꦁꦱꦸꦤ꧀"^^xsd:string .
+
+ns:Kaca3_S6_TL a ns:Transliteration ;
+    ns:transliterationText "yen wus panggih lawan ingsun"^^xsd:string .
+
+ns:Kaca3_S6_TR a ns:Translation ;
+    ns:translationText "apabila sudah berjumpa dengan hamba (apabila sudah tiba ajal hamba)"^^xsd:string .
+
+ns:Kaca3_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca3 ;
+    ns:hasOriginalScript ns:Kaca3_S7_OS ;
+    ns:hasTranslation ns:Kaca3_S7_TR ;
+    ns:hasTransliteration ns:Kaca3_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca3_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦁ ꦥꦸꦤ꧀ꦢꦶ ꦲꦤ꧀ꦒ꧀ꦒꦺꦴꦤꦺ ꦏꦥꦤ꧀ꦒ꧀ꦒꦾ"^^xsd:string .
+
+ns:Kaca3_S7_TL a ns:Transliteration ;
+    ns:transliterationText "ing pundi anggone kapanggya"^^xsd:string .
+
+ns:Kaca3_S7_TR a ns:Translation ;
+    ns:translationText "di manakah tempat bertemu"^^xsd:string .
+
+ns:Kaca4_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca4 ;
+    ns:hasOriginalScript ns:Kaca4_S1_OS ;
+    ns:hasTranslation ns:Kaca4_S1_TR ;
+    ns:hasTransliteration ns:Kaca4_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca4_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦭꦮꦤ꧀ ꦲꦤ꧀ꦢꦶꦏ ꦒꦸꦱ꧀ꦠꦶ"^^xsd:string .
+
+ns:Kaca4_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Kalawan andika gusti"^^xsd:string .
+
+ns:Kaca4_S1_TR a ns:Translation ;
+    ns:translationText "Dengan tuan"^^xsd:string .
+
+ns:Kaca4_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca4 ;
+    ns:hasOriginalScript ns:Kaca4_S2_OS ;
+    ns:hasTranslation ns:Kaca4_S2_TR ;
+    ns:hasTransliteration ns:Kaca4_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca4_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦸꦤꦥ ꦲꦤ꧀ꦢꦶꦏ ꦲꦫꦱ꧀"^^xsd:string .
+
+ns:Kaca4_S2_TL a ns:Transliteration ;
+    ns:transliterationText "punapa andika aras"^^xsd:string .
+
+ns:Kaca4_S2_TR a ns:Translation ;
+    ns:translationText "apakah tuan nantinya dapat diraba"^^xsd:string .
+
+ns:Kaca4_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca4 ;
+    ns:hasOriginalScript ns:Kaca4_S3_OS ;
+    ns:hasTranslation ns:Kaca4_S3_TR ;
+    ns:hasTransliteration ns:Kaca4_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca4_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦸꦤꦥ ꦢꦶꦤꦸꦭꦸ ꦩꦁꦏꦺꦴ"^^xsd:string .
+
+ns:Kaca4_S3_TL a ns:Transliteration ;
+    ns:transliterationText "punapa dinulu mangko"^^xsd:string .
+
+ns:Kaca4_S3_TR a ns:Translation ;
+    ns:translationText "dapat dilihat"^^xsd:string .
+
+ns:Kaca4_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca4 ;
+    ns:hasOriginalScript ns:Kaca4_S4_OS ;
+    ns:hasTranslation ns:Kaca4_S4_TR ;
+    ns:hasTransliteration ns:Kaca4_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca4_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦤ꧀ꦢꦶꦏ ꦕꦺꦏꦺꦭ꧀ ꦥꦸꦤꦥ"^^xsd:string .
+
+ns:Kaca4_S4_TL a ns:Transliteration ;
+    ns:transliterationText "andika cekel punapa"^^xsd:string .
+
+ns:Kaca4_S4_TR a ns:Translation ;
+    ns:translationText "juga dapat dipegang"^^xsd:string .
+
+ns:Kaca4_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca4 ;
+    ns:hasOriginalScript ns:Kaca4_S5_OS ;
+    ns:hasTranslation ns:Kaca4_S5_TR ;
+    ns:hasTransliteration ns:Kaca4_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca4_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦮꦸꦭ ꦚꦸꦮꦸꦤ꧀ ꦮꦺꦗꦁ"^^xsd:string .
+
+ns:Kaca4_S5_TL a ns:Transliteration ;
+    ns:transliterationText "kawula nyuwun wejang"^^xsd:string .
+
+ns:Kaca4_S5_TR a ns:Translation ;
+    ns:translationText "hamba mohon penjelasan"^^xsd:string .
+
+ns:Kaca4_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca4 ;
+    ns:hasOriginalScript ns:Kaca4_S6_OS ;
+    ns:hasTranslation ns:Kaca4_S6_TR ;
+    ns:hasTransliteration ns:Kaca4_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca4_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦪꦺꦤ꧀ ꦈꦫ ꦩꦺꦗꦁ ꦩꦫꦶꦁꦱꦸꦤ꧀"^^xsd:string .
+
+ns:Kaca4_S6_TL a ns:Transliteration ;
+    ns:transliterationText "yen ora mejang maringsun"^^xsd:string .
+
+ns:Kaca4_S6_TR a ns:Translation ;
+    ns:translationText "apabila tidak diberi penjelasan"^^xsd:string .
+
+ns:Kaca4_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca4 ;
+    ns:hasOriginalScript ns:Kaca4_S7_OS ;
+    ns:hasTranslation ns:Kaca4_S7_TR ;
+    ns:hasTransliteration ns:Kaca4_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca4_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦮꦸꦭ ꦠꦤ꧀ ꦲꦂꦱ ꦏꦿꦩ"^^xsd:string .
+
+ns:Kaca4_S7_TL a ns:Transliteration ;
+    ns:transliterationText "kawula tan arsa krama"^^xsd:string .
+
+ns:Kaca4_S7_TR a ns:Translation ;
+    ns:translationText "tentu hamba tidak dapat betingkah laku dengan benar"^^xsd:string .
+
+ns:Kaca5_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca5 ;
+    ns:hasOriginalScript ns:Kaca5_S1_OS ;
+    ns:hasTranslation ns:Kaca5_S1_TR ;
+    ns:hasTransliteration ns:Kaca5_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca5_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦺꦴꦗꦂ ꦥꦤ꧀ꦝꦶꦠ ꦩꦸꦱ꧀ꦠꦏꦶꦩ꧀"^^xsd:string .
+
+ns:Kaca5_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Mojar pandhita Mustakim"^^xsd:string .
+
+ns:Kaca5_S1_TR a ns:Translation ;
+    ns:translationText "Pandita Mustakim berkata"^^xsd:string .
+
+ns:Kaca5_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca5 ;
+    ns:hasOriginalScript ns:Kaca5_S2_OS ;
+    ns:hasTranslation ns:Kaca5_S2_TR ;
+    ns:hasTransliteration ns:Kaca5_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca5_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦁ ꦱꦸꦤ꧀ ꦠꦸꦂꦪꦸ ꦲꦤꦤꦶꦫ"^^xsd:string .
+
+ns:Kaca5_S2_TL a ns:Transliteration ;
+    ns:transliterationText "kang sun tuhu ananira"^^xsd:string .
+
+ns:Kaca5_S2_TR a ns:Translation ;
+    ns:translationText "yang aku ketahui"^^xsd:string .
+
+ns:Kaca5_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca5 ;
+    ns:hasOriginalScript ns:Kaca5_S3_OS ;
+    ns:hasTranslation ns:Kaca5_S3_TR ;
+    ns:hasTransliteration ns:Kaca5_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca5_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦶꦃꦶꦫ ꦱꦸꦤ꧀ ꦕꦺꦏꦺꦭ꧀ ꦩꦁꦏꦺ"^^xsd:string .
+
+ns:Kaca5_S3_TL a ns:Transliteration ;
+    ns:transliterationText "sihira sun cekel mangke"^^xsd:string .
+
+ns:Kaca5_S3_TR a ns:Translation ;
+    ns:translationText "akan kau ketahui nanti"^^xsd:string .
+
+ns:Kaca5_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca5 ;
+    ns:hasOriginalScript ns:Kaca5_S4_OS ;
+    ns:hasTranslation ns:Kaca5_S4_TR ;
+    ns:hasTransliteration ns:Kaca5_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca5_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦸꦤ꧀ ꦠꦶꦁꦒꦭꦶ ꦌꦢꦠꦶꦫ"^^xsd:string .
+
+ns:Kaca5_S4_TL a ns:Transliteration ;
+    ns:transliterationText "sun tingali edatira"^^xsd:string .
+
+ns:Kaca5_S4_TR a ns:Translation ;
+    ns:translationText "kutunjukkan mengenai zatmu"^^xsd:string .
+
+ns:Kaca5_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca5 ;
+    ns:hasOriginalScript ns:Kaca5_S5_OS ;
+    ns:hasTranslation ns:Kaca5_S5_TR ;
+    ns:hasTransliteration ns:Kaca5_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca5_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦭꦮꦤ꧀ ꦱꦶꦥꦠ꧀ ꦏꦁ ꦩꦸꦭꦾ"^^xsd:string .
+
+ns:Kaca5_S5_TL a ns:Transliteration ;
+    ns:transliterationText "lawan sipat kang mulya"^^xsd:string .
+
+ns:Kaca5_S5_TR a ns:Translation ;
+    ns:translationText "dan sifat yang mulia"^^xsd:string .
+
+ns:Kaca5_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca5 ;
+    ns:hasOriginalScript ns:Kaca5_S6_OS ;
+    ns:hasTranslation ns:Kaca5_S6_TR ;
+    ns:hasTransliteration ns:Kaca5_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca5_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦸꦏ꧀ꦩꦤꦺ ꦱꦸꦤ꧀ ꦲꦫꦱ꧀ ꦲꦶꦏꦸ"^^xsd:string .
+
+ns:Kaca5_S6_TL a ns:Transliteration ;
+    ns:transliterationText "sukmane sun aras iku"^^xsd:string .
+
+ns:Kaca5_S6_TR a ns:Translation ;
+    ns:translationText "sukma itu"^^xsd:string .
+
+ns:Kaca5_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca5 ;
+    ns:hasOriginalScript ns:Kaca5_S7_OS ;
+    ns:hasTranslation ns:Kaca5_S7_TR ;
+    ns:hasTransliteration ns:Kaca5_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca5_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦺꦥꦤ꧀ꦒ꧀ꦒꦶꦃ ꦲꦶꦁ ꦫꦄꦃ꧀ꦩꦠ꧀ꦠꦺꦴꦭꦃ"^^xsd:string .
+
+ns:Kaca5_S7_TL a ns:Transliteration ;
+    ns:transliterationText "kepanggih ing Rahmattolah"^^xsd:string .
+
+ns:Kaca5_S7_TR a ns:Translation ;
+    ns:translationText "nantinya akan bertemu di hadapan Rahmatollah"^^xsd:string .
+
+ns:Kaca6_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca6 ;
+    ns:hasOriginalScript ns:Kaca6_S1_OS ;
+    ns:hasTranslation ns:Kaca6_S1_TR ;
+    ns:hasTransliteration ns:Kaca6_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca6_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦁꦱꦸꦤ꧀ ꦒꦮꦺ ꦱꦶꦫ ꦪꦪꦶ"^^xsd:string .
+
+ns:Kaca6_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Ingsun gawe sira yayi"^^xsd:string .
+
+ns:Kaca6_S1_TR a ns:Translation ;
+    ns:translationText "Dinda akan aku buat"^^xsd:string .
+
+ns:Kaca6_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca6 ;
+    ns:hasOriginalScript ns:Kaca6_S2_OS ;
+    ns:hasTranslation ns:Kaca6_S2_TR ;
+    ns:hasTransliteration ns:Kaca6_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca6_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦺꦚꦠꦃꦤ꧀ ꦫꦱ ꦩꦸꦭꦾ"^^xsd:string .
+
+ns:Kaca6_S2_TL a ns:Transliteration ;
+    ns:transliterationText "kenyatahan rasa mulya"^^xsd:string .
+
+ns:Kaca6_S2_TR a ns:Translation ;
+    ns:translationText "mengerti kenyataan rasa mulia"^^xsd:string .
+
+ns:Kaca6_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca6 ;
+    ns:hasOriginalScript ns:Kaca6_S3_OS ;
+    ns:hasTranslation ns:Kaca6_S3_TR ;
+    ns:hasTransliteration ns:Kaca6_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca6_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦭꦮꦤ꧀ ꦲꦶꦁꦱꦸꦤ꧀ ꦒꦮꦺ ꦩꦁꦏꦺꦴ"^^xsd:string .
+
+ns:Kaca6_S3_TL a ns:Transliteration ;
+    ns:transliterationText "lawan ingsun gawe mangko"^^xsd:string .
+
+ns:Kaca6_S3_TR a ns:Translation ;
+    ns:translationText "serta aku jelaskan"^^xsd:string .
+
+ns:Kaca6_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca6 ;
+    ns:hasOriginalScript ns:Kaca6_S4_OS ;
+    ns:hasTranslation ns:Kaca6_S4_TR ;
+    ns:hasTransliteration ns:Kaca6_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca6_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦮꦺꦢꦭꦺ ꦱꦶꦄꦶꦁ ꦥꦁꦒꦺꦫꦤ꧀"^^xsd:string .
+
+ns:Kaca6_S4_TL a ns:Transliteration ;
+    ns:transliterationText "wedale sihing Pangeran"^^xsd:string .
+
+ns:Kaca6_S4_TR a ns:Translation ;
+    ns:translationText "perihal rasa kasih Tuhan"^^xsd:string .
+
+ns:Kaca6_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca6 ;
+    ns:hasOriginalScript ns:Kaca6_S5_OS ;
+    ns:hasTranslation ns:Kaca6_S5_TR ;
+    ns:hasTransliteration ns:Kaca6_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca6_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦸꦤꦥ ꦏꦂꦱ ꦲꦤ꧀ꦢꦶꦏ"^^xsd:string .
+
+ns:Kaca6_S5_TL a ns:Transliteration ;
+    ns:transliterationText "punapa karsa andika"^^xsd:string .
+
+ns:Kaca6_S5_TR a ns:Translation ;
+    ns:translationText "dan apapun yang ingin dinda ketahui"^^xsd:string .
+
+ns:Kaca6_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca6 ;
+    ns:hasOriginalScript ns:Kaca6_S6_OS ;
+    ns:hasTranslation ns:Kaca6_S6_TR ;
+    ns:hasTransliteration ns:Kaca6_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca6_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦸꦤꦶꦏꦸ ꦥꦩꦤ꧀ꦒ꧀ꦒꦶꦃ ꦲꦶꦁꦱꦸꦤ꧀"^^xsd:string .
+
+ns:Kaca6_S6_TL a ns:Transliteration ;
+    ns:transliterationText "puniku pamanggih ingsun"^^xsd:string .
+
+ns:Kaca6_S6_TR a ns:Translation ;
+    ns:translationText "begitulah maksudku"^^xsd:string .
+
+ns:Kaca6_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca6 ;
+    ns:hasOriginalScript ns:Kaca6_S7_OS ;
+    ns:hasTranslation ns:Kaca6_S7_TR ;
+    ns:hasTransliteration ns:Kaca6_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca6_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦏꦸ ꦱꦺꦗꦠꦶꦤꦶꦁ ꦏꦿꦩ"^^xsd:string .
+
+ns:Kaca6_S7_TL a ns:Transliteration ;
+    ns:transliterationText "iku sejatining krama"^^xsd:string .
+
+ns:Kaca6_S7_TR a ns:Translation ;
+    ns:translationText "menjelaskan tentang tingkah laku yang baik"^^xsd:string .
+
+ns:Kaca7_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca7 ;
+    ns:hasOriginalScript ns:Kaca7_S1_OS ;
+    ns:hasTranslation ns:Kaca7_S1_TR ;
+    ns:hasTransliteration ns:Kaca7_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca7_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦁ ꦫꦺꦠ꧀ꦤ ꦈꦩꦠꦸꦂ ꦲꦫꦶꦱ꧀"^^xsd:string .
+
+ns:Kaca7_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Sang Retna umatur aris"^^xsd:string .
+
+ns:Kaca7_S1_TR a ns:Translation ;
+    ns:translationText "Sang putri berkata sopan"^^xsd:string .
+
+ns:Kaca7_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca7 ;
+    ns:hasOriginalScript ns:Kaca7_S2_OS ;
+    ns:hasTranslation ns:Kaca7_S2_TR ;
+    ns:hasTransliteration ns:Kaca7_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca7_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦮꦺꦴꦤ꧀ꦠꦺꦤ꧀ ꦩꦭꦶꦃ ꦠꦸꦂ ꦏꦮꦸꦭ"^^xsd:string .
+
+ns:Kaca7_S2_TL a ns:Transliteration ;
+    ns:transliterationText "wonten malih tur kawula"^^xsd:string .
+
+ns:Kaca7_S2_TR a ns:Translation ;
+    ns:translationText "ada lagi pertanyaan dari hamba"^^xsd:string .
+
+ns:Kaca7_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca7 ;
+    ns:hasOriginalScript ns:Kaca7_S3_OS ;
+    ns:hasTranslation ns:Kaca7_S3_TR ;
+    ns:hasTransliteration ns:Kaca7_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca7_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦱꦩ꧀ꦥꦸꦤ꧀ ꦱꦭꦃ ꦠꦩ꧀ꦥꦶ ꦩꦁꦏꦺꦴ"^^xsd:string .
+
+ns:Kaca7_S3_TL a ns:Transliteration ;
+    ns:transliterationText "sampun salah tampi mangko"^^xsd:string .
+
+ns:Kaca7_S3_TR a ns:Translation ;
+    ns:translationText "namun janganlah menjadikan kesalahpahaman"^^xsd:string .
+
+ns:Kaca7_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca7 ;
+    ns:hasOriginalScript ns:Kaca7_S4_OS ;
+    ns:hasTranslation ns:Kaca7_S4_TR ;
+    ns:hasTransliteration ns:Kaca7_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca7_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦮꦸꦭ ꦩꦠꦸꦂ ꦲꦶꦁ ꦠꦸꦮꦤ꧀"^^xsd:string .
+
+ns:Kaca7_S4_TL a ns:Transliteration ;
+    ns:transliterationText "kawula matur ing tuwan"^^xsd:string .
+
+ns:Kaca7_S4_TR a ns:Translation ;
+    ns:translationText "hamba bertanya"^^xsd:string .
+
+ns:Kaca7_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca7 ;
+    ns:hasOriginalScript ns:Kaca7_S5_OS ;
+    ns:hasTranslation ns:Kaca7_S5_TR ;
+    ns:hasTransliteration ns:Kaca7_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca7_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦭꦺꦫꦺꦱ꧀ ꦏꦂꦱ ꦥꦢꦸꦏ"^^xsd:string .
+
+ns:Kaca7_S5_TL a ns:Transliteration ;
+    ns:transliterationText "leres karsa paduka"^^xsd:string .
+
+ns:Kaca7_S5_TR a ns:Translation ;
+    ns:translationText "sesuai kehendak tuan"^^xsd:string .
+
+ns:Kaca7_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca7 ;
+    ns:hasOriginalScript ns:Kaca7_S6_OS ;
+    ns:hasTranslation ns:Kaca7_S6_TR ;
+    ns:hasTransliteration ns:Kaca7_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca7_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦤ꧀ꦢꦶꦏ ꦱꦫꦺ ꦭꦤ꧀ ꦲꦶꦁꦱꦸꦤ꧀"^^xsd:string .
+
+ns:Kaca7_S6_TL a ns:Transliteration ;
+    ns:transliterationText "andika sare lan ingsun"^^xsd:string .
+
+ns:Kaca7_S6_TR a ns:Translation ;
+    ns:translationText "tuan tidur bersama hamba"^^xsd:string .
+
+ns:Kaca7_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca7 ;
+    ns:hasOriginalScript ns:Kaca7_S7_OS ;
+    ns:hasTranslation ns:Kaca7_S7_TR ;
+    ns:hasTransliteration ns:Kaca7_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca7_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦶꦭꦤꦺ ꦠꦺꦏ ꦲꦱꦶꦫꦩ꧀"^^xsd:string .
+
+ns:Kaca7_S7_TL a ns:Transliteration ;
+    ns:transliterationText "milane teka asiram"^^xsd:string .
+
+ns:Kaca7_S7_TR a ns:Translation ;
+    ns:translationText "mengapa diharuskan mandi keramas"^^xsd:string .
+
+ns:Kaca8_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca8 ;
+    ns:hasOriginalScript ns:Kaca8_S1_OS ;
+    ns:hasTranslation ns:Kaca8_S1_TR ;
+    ns:hasTransliteration ns:Kaca8_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca8_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦸꦤꦥ ꦏꦮꦸꦭ ꦤꦗꦶꦱ꧀"^^xsd:string .
+
+ns:Kaca8_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Punapa kawula najis"^^xsd:string .
+
+ns:Kaca8_S1_TR a ns:Translation ;
+    ns:translationText "Apakah hamba menjadi najis"^^xsd:string .
+
+ns:Kaca8_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca8 ;
+    ns:hasOriginalScript ns:Kaca8_S2_OS ;
+    ns:hasTranslation ns:Kaca8_S2_TR ;
+    ns:hasTransliteration ns:Kaca8_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca8_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦏ꧀ ꦠꦸꦮꦤ꧀ ꦱꦶꦫꦩ꧀ ꦥꦸꦤꦶꦏ"^^xsd:string .
+
+ns:Kaca8_S2_TL a ns:Transliteration ;
+    ns:transliterationText "pak tuwan siram punika"^^xsd:string .
+
+ns:Kaca8_S2_TR a ns:Translation ;
+    ns:translationText "sehingga harus mandi keramas"^^xsd:string .
+
+ns:Kaca8_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca8 ;
+    ns:hasOriginalScript ns:Kaca8_S3_OS ;
+    ns:hasTranslation ns:Kaca8_S3_TR ;
+    ns:hasTransliteration ns:Kaca8_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca8_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦤꦗꦶꦱ꧀ ꦥꦸꦤꦥ ꦮꦺꦱ꧀ꦠꦤꦺ"^^xsd:string .
+
+ns:Kaca8_S3_TL a ns:Transliteration ;
+    ns:transliterationText "najis punapa westane"^^xsd:string .
+
+ns:Kaca8_S3_TR a ns:Translation ;
+    ns:translationText "apakah berhubungan intim menjadikan najis"^^xsd:string .
+
+ns:Kaca8_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca8 ;
+    ns:hasOriginalScript ns:Kaca8_S4_OS ;
+    ns:hasTranslation ns:Kaca8_S4_TR ;
+    ns:hasTransliteration ns:Kaca8_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca8_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦥꦤ꧀ ꦱꦩꦶ ꦮꦸꦗꦸꦢ꧀ ꦠꦸꦁꦒꦭ꧀"^^xsd:string .
+
+ns:Kaca8_S4_TL a ns:Transliteration ;
+    ns:transliterationText "mapan sami wujud tunggal"^^xsd:string .
+
+ns:Kaca8_S4_TR a ns:Translation ;
+    ns:translationText "hamba mohon penjelasan"^^xsd:string .
+
+ns:Kaca8_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca8 ;
+    ns:hasOriginalScript ns:Kaca8_S5_OS ;
+    ns:hasTranslation ns:Kaca8_S5_TR ;
+    ns:hasTransliteration ns:Kaca8_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca8_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦮꦸꦭ ꦢꦶꦏ ꦮꦺꦗꦁ"^^xsd:string .
+
+ns:Kaca8_S5_TL a ns:Transliteration ;
+    ns:transliterationText "kawula dika wejang"^^xsd:string .
+
+ns:Kaca8_S5_TR a ns:Translation ;
+    ns:translationText "apabila hamba tidak diberitahu"^^xsd:string .
+
+ns:Kaca8_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca8 ;
+    ns:hasOriginalScript ns:Kaca8_S6_OS ;
+    ns:hasTranslation ns:Kaca8_S6_TR ;
+    ns:hasTransliteration ns:Kaca8_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca8_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦪꦺꦤ꧀ ꦤꦺꦴꦫ ꦩꦸꦫꦸꦏ꧀ ꦩꦿꦶꦁ ꦲꦶꦁꦱꦸꦤ꧀"^^xsd:string .
+
+ns:Kaca8_S6_TL a ns:Transliteration ;
+    ns:transliterationText "yen nora muruk mring ingsun"^^xsd:string .
+
+ns:Kaca8_S6_TR a ns:Translation ;
+    ns:translationText "hamba tidak akan dapat berlaku baik"^^xsd:string .
+
+ns:Kaca8_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca8 ;
+    ns:hasOriginalScript ns:Kaca8_S7_OS ;
+    ns:hasTranslation ns:Kaca8_S7_TR ;
+    ns:hasTransliteration ns:Kaca8_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca8_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦮꦸꦭ ꦠꦤ꧀ ꦲꦂꦱ ꦏꦿꦩ"^^xsd:string .
+
+ns:Kaca8_S7_TL a ns:Transliteration ;
+    ns:transliterationText "kawula tan arsa krama"^^xsd:string .
+
+ns:Kaca8_S7_TR a ns:Translation ;
+    ns:translationText ""^^xsd:string .
+
+ns:Kaca9_S1 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca9 ;
+    ns:hasOriginalScript ns:Kaca9_S1_OS ;
+    ns:hasTranslation ns:Kaca9_S1_TR ;
+    ns:hasTransliteration ns:Kaca9_S1_TL ;
+    ns:sentenceNumber 1 .
+
+ns:Kaca9_S1_OS a ns:OriginalScript ;
+    ns:originalText "ꦩꦶꦭꦤꦺ ꦗꦶꦤꦧꦠ꧀ ꦒꦸꦱ꧀ꦠꦶ"^^xsd:string .
+
+ns:Kaca9_S1_TL a ns:Transliteration ;
+    ns:transliterationText "Milane jinabat gusti"^^xsd:string .
+
+ns:Kaca9_S1_TR a ns:Translation ;
+    ns:translationText "Dan sehabis bersetubuh dengan tuan"^^xsd:string .
+
+ns:Kaca9_S2 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca9 ;
+    ns:hasOriginalScript ns:Kaca9_S2_OS ;
+    ns:hasTranslation ns:Kaca9_S2_TR ;
+    ns:hasTransliteration ns:Kaca9_S2_TL ;
+    ns:sentenceNumber 2 .
+
+ns:Kaca9_S2_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦶꦤ꧀ꦠꦺꦤ꧀ ꦏꦺꦲꦺ ꦩꦸꦏꦫꦤꦃ"^^xsd:string .
+
+ns:Kaca9_S2_TL a ns:Transliteration ;
+    ns:transliterationText "pinten kehe mukaranah"^^xsd:string .
+
+ns:Kaca9_S2_TR a ns:Translation ;
+    ns:translationText "ada berapa banyak aturan-aturan yang harus dilaksanakan"^^xsd:string .
+
+ns:Kaca9_S3 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca9 ;
+    ns:hasOriginalScript ns:Kaca9_S3_OS ;
+    ns:hasTranslation ns:Kaca9_S3_TR ;
+    ns:hasTransliteration ns:Kaca9_S3_TL ;
+    ns:sentenceNumber 3 .
+
+ns:Kaca9_S3_OS a ns:OriginalScript ;
+    ns:originalText "ꦥꦺꦤ꧀ꦕꦂ ꦱꦠꦸꦁꦒꦭ꧀-ꦠꦸꦁꦒꦭꦺ"^^xsd:string .
+
+ns:Kaca9_S3_TL a ns:Transliteration ;
+    ns:transliterationText "pencar satunggal-tunggale"^^xsd:string .
+
+ns:Kaca9_S3_TR a ns:Translation ;
+    ns:translationText "uraikanlah satu persatu"^^xsd:string .
+
+ns:Kaca9_S4 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca9 ;
+    ns:hasOriginalScript ns:Kaca9_S4_OS ;
+    ns:hasTranslation ns:Kaca9_S4_TR ;
+    ns:hasTransliteration ns:Kaca9_S4_TL ;
+    ns:sentenceNumber 4 .
+
+ns:Kaca9_S4_OS a ns:OriginalScript ;
+    ns:originalText "ꦲꦶꦁꦏꦁ ꦲꦫꦤ꧀ ꦩꦸꦏꦫꦤꦃ"^^xsd:string .
+
+ns:Kaca9_S4_TL a ns:Transliteration ;
+    ns:transliterationText "ingkang aran mukaranah"^^xsd:string .
+
+ns:Kaca9_S4_TR a ns:Translation ;
+    ns:translationText "dari aturan-aturan tersebut"^^xsd:string .
+
+ns:Kaca9_S5 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca9 ;
+    ns:hasOriginalScript ns:Kaca9_S5_OS ;
+    ns:hasTranslation ns:Kaca9_S5_TR ;
+    ns:hasTransliteration ns:Kaca9_S5_TL ;
+    ns:sentenceNumber 5 .
+
+ns:Kaca9_S5_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦮꦸꦭ ꦚꦸꦮꦸꦤ꧀ ꦮꦺꦗꦁ"^^xsd:string .
+
+ns:Kaca9_S5_TL a ns:Transliteration ;
+    ns:transliterationText "kawula nyuwun wejang"^^xsd:string .
+
+ns:Kaca9_S5_TR a ns:Translation ;
+    ns:translationText "hamba mohon penjelasan mengenai"^^xsd:string .
+
+ns:Kaca9_S6 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca9 ;
+    ns:hasOriginalScript ns:Kaca9_S6_OS ;
+    ns:hasTranslation ns:Kaca9_S6_TR ;
+    ns:hasTransliteration ns:Kaca9_S6_TL ;
+    ns:sentenceNumber 6 .
+
+ns:Kaca9_S6_OS a ns:OriginalScript ;
+    ns:originalText "ꦏꦢꦺꦴꦱ꧀ ꦥꦸꦤ꧀ꦢꦶ ꦠꦺꦒꦺꦱꦶꦥꦸꦤ꧀"^^xsd:string .
+
+ns:Kaca9_S6_TL a ns:Transliteration ;
+    ns:transliterationText "kados pundi tegesipun"^^xsd:string .
+
+ns:Kaca9_S6_TR a ns:Translation ;
+    ns:translationText "maksud dan tujuannya"^^xsd:string .
+
+ns:Kaca9_S7 a ns:Sentence ;
+    ns:belongsToManuscript ns:Kaca9 ;
+    ns:hasOriginalScript ns:Kaca9_S7_OS ;
+    ns:hasTranslation ns:Kaca9_S7_TR ;
+    ns:hasTransliteration ns:Kaca9_S7_TL ;
+    ns:sentenceNumber 7 .
+
+ns:Kaca9_S7_OS a ns:OriginalScript ;
+    ns:originalText "ꦫꦗ ꦥꦤ꧀ꦝꦶꦠ ꦔꦤ꧀ꦢꦶꦏ"^^xsd:string .
+
+ns:Kaca9_S7_TL a ns:Transliteration ;
+    ns:transliterationText "raja pandhita ngandika"^^xsd:string .
+
+ns:Kaca9_S7_TR a ns:Translation ;
+    ns:translationText "raja pandita menjawab"^^xsd:string .
+
+ns:ManuscriptSection a owl:Class .
+
+ns:Kaca1 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca1_S1,
+        ns:Kaca1_S2,
+        ns:Kaca1_S3,
+        ns:Kaca1_S4,
+        ns:Kaca1_S5,
+        ns:Kaca1_S6,
+        ns:Kaca1_S7 ;
+    ns:kacaNumber 1 .
+
+ns:Kaca10 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca10_S1,
+        ns:Kaca10_S2,
+        ns:Kaca10_S3,
+        ns:Kaca10_S4,
+        ns:Kaca10_S5,
+        ns:Kaca10_S6,
+        ns:Kaca10_S7 ;
+    ns:kacaNumber 10 .
+
+ns:Kaca11 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca11_S1,
+        ns:Kaca11_S2,
+        ns:Kaca11_S3,
+        ns:Kaca11_S4,
+        ns:Kaca11_S5,
+        ns:Kaca11_S6,
+        ns:Kaca11_S7 ;
+    ns:kacaNumber 11 .
+
+ns:Kaca12 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca12_S1,
+        ns:Kaca12_S2,
+        ns:Kaca12_S3,
+        ns:Kaca12_S4,
+        ns:Kaca12_S5,
+        ns:Kaca12_S6,
+        ns:Kaca12_S7 ;
+    ns:kacaNumber 12 .
+
+ns:Kaca13 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca13_S1,
+        ns:Kaca13_S2,
+        ns:Kaca13_S3,
+        ns:Kaca13_S4,
+        ns:Kaca13_S5,
+        ns:Kaca13_S6,
+        ns:Kaca13_S7 ;
+    ns:kacaNumber 13 .
+
+ns:Kaca14 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca14_S1,
+        ns:Kaca14_S2,
+        ns:Kaca14_S3,
+        ns:Kaca14_S4,
+        ns:Kaca14_S5,
+        ns:Kaca14_S6,
+        ns:Kaca14_S7 ;
+    ns:kacaNumber 14 .
+
+ns:Kaca15 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca15_S1,
+        ns:Kaca15_S2,
+        ns:Kaca15_S3,
+        ns:Kaca15_S4,
+        ns:Kaca15_S5,
+        ns:Kaca15_S6,
+        ns:Kaca15_S7 ;
+    ns:kacaNumber 15 .
+
+ns:Kaca16 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca16_S1,
+        ns:Kaca16_S2,
+        ns:Kaca16_S3,
+        ns:Kaca16_S4,
+        ns:Kaca16_S5,
+        ns:Kaca16_S6,
+        ns:Kaca16_S7 ;
+    ns:kacaNumber 16 .
+
+ns:Kaca17 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca17_S1,
+        ns:Kaca17_S2,
+        ns:Kaca17_S3,
+        ns:Kaca17_S4,
+        ns:Kaca17_S5,
+        ns:Kaca17_S6,
+        ns:Kaca17_S7 ;
+    ns:kacaNumber 17 .
+
+ns:Kaca18 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca18_S1,
+        ns:Kaca18_S2,
+        ns:Kaca18_S3,
+        ns:Kaca18_S4,
+        ns:Kaca18_S5,
+        ns:Kaca18_S6,
+        ns:Kaca18_S7 ;
+    ns:kacaNumber 18 .
+
+ns:Kaca2 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca2_S1,
+        ns:Kaca2_S2,
+        ns:Kaca2_S3,
+        ns:Kaca2_S4,
+        ns:Kaca2_S5,
+        ns:Kaca2_S6,
+        ns:Kaca2_S7 ;
+    ns:kacaNumber 2 .
+
+ns:Kaca3 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca3_S1,
+        ns:Kaca3_S2,
+        ns:Kaca3_S3,
+        ns:Kaca3_S4,
+        ns:Kaca3_S5,
+        ns:Kaca3_S6,
+        ns:Kaca3_S7 ;
+    ns:kacaNumber 3 .
+
+ns:Kaca4 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca4_S1,
+        ns:Kaca4_S2,
+        ns:Kaca4_S3,
+        ns:Kaca4_S4,
+        ns:Kaca4_S5,
+        ns:Kaca4_S6,
+        ns:Kaca4_S7 ;
+    ns:kacaNumber 4 .
+
+ns:Kaca5 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca5_S1,
+        ns:Kaca5_S2,
+        ns:Kaca5_S3,
+        ns:Kaca5_S4,
+        ns:Kaca5_S5,
+        ns:Kaca5_S6,
+        ns:Kaca5_S7 ;
+    ns:kacaNumber 5 .
+
+ns:Kaca6 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca6_S1,
+        ns:Kaca6_S2,
+        ns:Kaca6_S3,
+        ns:Kaca6_S4,
+        ns:Kaca6_S5,
+        ns:Kaca6_S6,
+        ns:Kaca6_S7 ;
+    ns:kacaNumber 6 .
+
+ns:Kaca7 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca7_S1,
+        ns:Kaca7_S2,
+        ns:Kaca7_S3,
+        ns:Kaca7_S4,
+        ns:Kaca7_S5,
+        ns:Kaca7_S6,
+        ns:Kaca7_S7 ;
+    ns:kacaNumber 7 .
+
+ns:Kaca8 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca8_S1,
+        ns:Kaca8_S2,
+        ns:Kaca8_S3,
+        ns:Kaca8_S4,
+        ns:Kaca8_S5,
+        ns:Kaca8_S6,
+        ns:Kaca8_S7 ;
+    ns:kacaNumber 8 .
+
+ns:Kaca9 a ns:ManuscriptPart ;
+    ns:belongsToSection ns:BrantaKingkinAsmaradana ;
+    ns:hasSentence ns:Kaca9_S1,
+        ns:Kaca9_S2,
+        ns:Kaca9_S3,
+        ns:Kaca9_S4,
+        ns:Kaca9_S5,
+        ns:Kaca9_S6,
+        ns:Kaca9_S7 ;
+    ns:kacaNumber 9 .
+
+ns:BrantaKingkinAsmaradana a ns:ManuscriptSection ;
+    ns:hasManuscriptPart ns:Kaca1,
+        ns:Kaca10,
+        ns:Kaca11,
+        ns:Kaca12,
+        ns:Kaca13,
+        ns:Kaca14,
+        ns:Kaca15,
+        ns:Kaca16,
+        ns:Kaca17,
+        ns:Kaca18,
+        ns:Kaca2,
+        ns:Kaca3,
+        ns:Kaca4,
+        ns:Kaca5,
+        ns:Kaca6,
+        ns:Kaca7,
+        ns:Kaca8,
+        ns:Kaca9 ;
+    ns:sectionTitle "Branta Kingkin: Asmaradana"^^xsd:string .
+
+ns:ManuscriptPart a owl:Class .
+
+ns:OriginalScript a owl:Class .
+
+ns:Translation a owl:Class .
+
+ns:Transliteration a owl:Class .
+
+ns:Sentence a owl:Class .
+
