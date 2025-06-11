@@ -111,19 +111,31 @@ export default function SearchFilters({ filters, onFiltersChange }) {
                             onClick={() => onFiltersChange({ kaca: '1', section: 'asmaradana' })}
                             className="w-full text-left p-2 text-sm hover:bg-gray-200 dark:hover:bg-gray-500 rounded-lg transition-colors"
                         >
-                            Kaca 1 - Asmaradana
+                            Kaca 1 - Branta Kingkin: Asmaradana
                         </button>
                         <button
-                            onClick={() => onFiltersChange({ kaca: '2', section: 'branta-kingking' })}
+                            onClick={() => onFiltersChange({ kaca: '10', section: 'asmaradana' })}
                             className="w-full text-left p-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-500 rounded-lg transition-colors"
                         >
-                            Kaca 2 - Branta Kingking
+                            Kaca 10 - Branta Kingkin: Asmaradana
                         </button>
                         <button
                             onClick={() => onFiltersChange({ kaca: '', section: 'asmaradana' })}
                             className="w-full text-left p-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-500 rounded-lg transition-colors"
                         >
-                            Semua Asmaradana
+                            Semua Branta Kingkin: Asmaradana
+                        </button>
+                        <button
+                            onClick={() => onFiltersChange({ kaca: '5', section: '' })}
+                            className="w-full text-left p-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-500 rounded-lg transition-colors"
+                        >
+                            Kaca 5 - Semua Bagian
+                        </button>
+                        <button
+                            onClick={() => onFiltersChange({ kaca: '15', section: '' })}
+                            className="w-full text-left p-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-500 rounded-lg transition-colors"
+                        >
+                            Kaca 15 - Semua Bagian
                         </button>
                     </div>
                 </div>

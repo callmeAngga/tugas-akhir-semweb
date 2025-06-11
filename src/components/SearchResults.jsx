@@ -1,6 +1,6 @@
 import { FaBook, FaLanguage, FaGlobe, FaSpinner, FaSearch } from 'react-icons/fa';
 
-export default function SearchResults({ results, isLoading, searchQuery }) {
+export default function SearchResults({ results, isLoading, searchQuery, searchTime, error }) {
     if (isLoading) {
         return (
             <div className="bg-white border dark:border-gray-800 border-gray-300 dark:bg-gray-800 rounded-lg p-8">
@@ -12,13 +12,24 @@ export default function SearchResults({ results, isLoading, searchQuery }) {
         );
     }
 
+    if (error) {
+        return (
+            <div className="bg-white border dark:border-gray-800 border-gray-300 dark:bg-gray-800 rounded-lg p-8">
+                <div className="text-red-500">
+                    <h3 className="text-lg font-medium mb-2">Error</h3>
+                    <p>{error}</p>
+                </div>
+            </div>
+        );
+    }
+
     if (searchQuery && results.length === 0) {
         return (
             <div className="bg-white border dark:border-gray-800 border-gray-300 dark:bg-gray-800 rounded-lg p-8 text-center">
                 <FaSearch className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-gray-800 mb-2">Tidak Ada Hasil</h3>
                 <p className="text-gray-600 mb-4">
-                    Tidak ditemukan hasil untuk "{searchQuery}". Coba kata kunci lain atau gunakan filter yang berbeda.
+                    Tidak ditemukan hasil untuk "{searchQuery}". Waktu pencarian: {searchTime.toFixed(2)} detik
                 </p>
                 <div className="bg-blue-50 rounded-lg p-4 text-left">
                     <h4 className="font-medium text-gray-800 mb-2">Saran:</h4>
@@ -58,7 +69,7 @@ export default function SearchResults({ results, isLoading, searchQuery }) {
                         </p>
                     </div>
                     <div className="text-sm text-gray-500">
-                        Waktu pencarian: 0.3 detik
+                        Waktu pencarian: {searchTime.toFixed(2)} detik
                     </div>
                 </div>
             </div>
@@ -107,7 +118,7 @@ export default function SearchResults({ results, isLoading, searchQuery }) {
                         {/* Terjemahan */}
                         <div className="rounded-lg p-4 dark:bg-amber-900/30 bg-[#EDBA3D20]">
                             <div className="flex items-center space-x-2 mb-2">
-                                <FaGlobe className="h-4 w-4 text-amber-400"/>
+                                <FaGlobe className="h-4 w-4 text-amber-400" />
                                 <span className="text-sm font-medium text-amber-400">Terjemahan</span>
                             </div>
                             <p className="text-lg text-gray-800 dark:text-gray-200 font-medium">

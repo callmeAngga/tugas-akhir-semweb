@@ -10,19 +10,6 @@ const AppHeader = () => {
     const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false);
     const { isMobileOpen, toggleSidebar, toggleMobileSidebar } = useSidebar();
 
-    useEffect(() => {
-        const handleResize = () => {
-            const currentWidth = window.innerWidth;
-            const newIsGreaterThan1024 = currentWidth >= 1024;
-            setIsWidthLarge(newIsGreaterThan1024);
-        };
-
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
     const handleToggle = () => {
         if (window.innerWidth >= 1024) {
             toggleSidebar();
