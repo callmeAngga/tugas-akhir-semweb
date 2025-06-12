@@ -18,32 +18,6 @@
             setSearchQuery(query);
             setError(null);
 
-            // Simulasi pencarian - nanti akan diganti dengan SPARQL query
-            // setTimeout(() => {
-            //     const mockResults = [
-            //         {
-            //             id: 1,
-            //             originalScript: "ꦩꦤꦶꦫ ꦭꦶꦂꦧꦸ ꦱꦸꦏ",
-            //             transliteration: "manira liru suka",
-            //             translation: "diriku senang gembira",
-            //             kaca: 1,
-            //             sentenceNumber: 1,
-            //             section: "Asmaradana"
-            //         },
-            //         {
-            //             id: 2,
-            //             originalScript: "ꦱꦶꦫ ꦏꦤ꧀ꦝꦏ ꦭꦸꦩꦏꦸ",
-            //             transliteration: "sira kandak lumaku",
-            //             translation: "engkau hendak berjalan",
-            //             kaca: 1,
-            //             sentenceNumber: 2,
-            //             section: "Asmaradana"
-            //         }
-            //     ];
-            //     setResults(mockResults);
-            //     setIsLoading(false);
-            // }, 1000);
-
             const startTime = performance.now();
 
             try {
@@ -79,9 +53,8 @@
 
         return (
             <div className="p-6 mx-auto">
-                <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-300 mb-2">Pencarian Transliterasi & Terjemahan</h1>
-                    <p className="text-gray-600 dark:text-gray-400">Cari kata atau kalimat dalam naskah Suluk Sujinah</p>
+                <div className="mb-5">
+                    <p className="text-gray-600 dark:text-gray-400 text-lg font-medium">Cari kata atau kalimat dalam naskah Suluk Sujinah</p>
                 </div>
 
                 <div className="bg-white border dark:border-gray-800 border-gray-300 dark:bg-gray-800 rounded-lg p-6 mb-6">
@@ -96,11 +69,6 @@
                         />
                     </div>
                     <div className="lg:col-span-3">
-                        {/* <SearchResults
-                            results={results}
-                            isLoading={isLoading}
-                            searchQuery={searchQuery}
-                        /> */}
                         <SearchResults
                             results={results}
                             isLoading={isLoading}
