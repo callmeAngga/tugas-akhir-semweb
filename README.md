@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Suluk Sujinah
 
-## Getting Started
+Proyek ini bertujuan membangun aplikasi web pencarian translasi bahasa Jawa ke bahasa Indonesia menggunakan pendekatan *Semantic Web*. Data dari naskah *Suluk Sujinah* diubah ke dalam format RDF, disusun ontologi linguistik, dan diakses melalui *SPARQL endpoint* untuk menghasilkan pencarian yang kontekstual dan bermakna melalui antarmuka web yang sederhana dan responsif.
 
-First, run the development server:
+## 🚀 Menjalankan Aplikasi
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 1. Clone Repository
+```bash git clone
+https://github.com/callmeAngga/tugas-akhir-semweb.git
+cd tugas-akhir-semweb
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Setup Apache Jena Fuseki
+- Download Apache Jena Fuseki 4.9.0
+- Extract dan jalankan:
+```bash
+./fuseki-server --mem --update /suluksujinah
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Load Data RDF
+- Akses Fuseki web UI di http://localhost:3030
+- Buat dataset baru bernama `suluksujinah`
+- Upload file Turtle:
+  - File: `src/data/output_suluk.ttl`
+  - Format: Turtle (TTL)
 
-## Learn More
+### 5. Jalankan Aplikasi
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Akses antarmuka pencarian di: http://localhost:3000/pencarian
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔍 Panduan Penggunaan
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Pencarian Dasar
+- Masukkan kata kunci di kolom pencarian (contoh: "asmara")
+- Hasil akan menampilkan:
+  - Aksara Jawa asli (dengan rendering font yang tepat)
+  - Transliterasi Latin
+  - Terjemahan Indonesia
+  - Metadata (nomor bab dan baris)
 
-## Deploy on Vercel
+### Fitur Lanjutan
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Filtering
+- **Berdasarkan Bab**: Pilih dari dropdown (Kaca 1-5)
+- **Berdasarkan Bagian**: Filter berdasarkan "Asmaradana" atau "Branta Kingking"
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Mode Pencarian
+| Mode | Deskripsi | Contoh Query |
+|------|-----------|--------------|
+| Semua Field | Pencarian di semua versi teks | "tresna" |
+| Aksara Asli | Hanya aksara Jawa | "ꦠꦿꦺꦱ꧀ꦤ" |
+| Transliterasi | Hanya teks Latin | "adus" |
+| Terjemahan | Hanya bahasa Indonesia | "gembira" |
+
+## 📊 Contoh Query
+
+Coba query yang sudah terverifikasi ini:
+```
+"yayi"        # Term umum di Kaca 2
+"Milaningsun" # Sering muncul di terjemahan
+"wuyung"      # Muncul di Branta Kingking
+```
+
+## 🖼️ Screenshot Aplikasi
+![Screenshot aplikasi](/public/suluk-sujinah.png)
+![Screenshot aplikasi](/public/suluk-sujinah-2.png)
+![Screenshot aplikasi](/public/suluk-sujinah-3.png)
+![Screenshot aplikasi](/public/suluk-sujinah-4.png)
